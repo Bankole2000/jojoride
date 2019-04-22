@@ -1,0 +1,115 @@
+// Colors
+$primary-color: #00aff5;
+$secondary-color: #5dd167;
+$header-color: #054752;
+$text-color: #708c91;
+$grey: #ddd;
+$light-grey: #ededed;
+$white: #fff;
+$black: #000;
+$dark: #282828;
+
+// Fonts
+
+$lg-title: 60px;
+$lg-subtitle: 26px;
+$md-title: 30px;
+$sm-title: 18px;
+$text: 16px;
+$sm-text: 13px;
+
+@mixin ease-out {
+  transition: all 0.3s ease-out;
+}
+
+// Reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: $text;
+  color: $primary-color;
+
+  &:hover {
+    color: darken($primary-color, 15);
+    @include ease-out();
+  }
+
+  &.btn {
+    display: inline-block;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+// Gradients
+@mixin linear-gradient($top-color, $bottom-color, $opacity1, $opacity2) {
+  background: -moz-linear-gradient(
+    top,
+    rgba($top-color, $opacity1) 0%,
+    rgba($bottom-color, $opacity2) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba($top-color, $opacity1) 0%,
+    rgba($bottom-color, $opacity2) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba($top-color, $opacity1) 0%,
+    rgba($bottom-color, $opacity2) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str(rgba($top-color, $opacity1))}', endColorstr='#{ie-hex-str(rgba($bottom-color, $opacity2))}',GradientType=0 ); /* IE6-9 */
+}
+
+// Buttons
+.btn {
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 50px;
+  color: $white;
+
+  &.btn-primary {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 15);
+      @include ease-out();
+    }
+  }
+}

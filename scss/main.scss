@@ -1,0 +1,325 @@
+@import "config";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:600");
+@import url("https://fonts.googleapis.com/css?family=Cabin:700|Source+Sans+Pro:700");
+body {
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  height: 72px;
+  z-index: 60;
+  border-bottom: 1px solid $grey;
+
+  .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+
+    .nav-left {
+      flex: 1;
+    }
+    .nav-center {
+      flex: 1;
+    }
+    .nav-right {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.home-grid {
+  max-width: 1016px;
+  padding: 24px;
+  margin: 24px auto 24px auto;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .callout {
+    h2 {
+      font-size: $md-title;
+      color: $header-color;
+      font-weight: strong;
+      padding: 24px 0;
+    }
+    p {
+      font-size: $text;
+      color: $text-color;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.home-rides {
+  background-color: $secondary-color;
+  width: 100%;
+
+  .content {
+    max-width: 1016px;
+    padding: 24px;
+    margin: 24px auto;
+    h2 {
+      font-size: $md-title;
+      color: #fff;
+      padding: 5px;
+      position: relative;
+      margin-bottom: 24px;
+
+      a {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        color: #fff;
+        font-size: $text;
+        padding: 5px;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: space-between;
+      margin-bottom: 24px;
+
+      li {
+        flex: 1;
+        align-self: space-between;
+        margin: 0px 24px;
+
+        a {
+          display: flex;
+          padding: 16px;
+          background-color: #fff;
+          border-radius: 5px;
+          justify-content: space-between;
+          margin-bottom: 16px;
+
+          .ride-label {
+            font-size: $sm-title;
+            color: $header-color;
+          }
+          .ride-avg-price {
+            font-size: $sm-title;
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.find-more {
+  margin: 24px auto;
+  padding: 24px;
+  max-width: 1016px;
+
+  .title {
+    font-size: $md-title;
+    color: $header-color;
+    padding: 24px 0;
+    position: relative;
+
+    a {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      font-size: $text;
+      padding: 24px;
+    }
+  }
+
+  .intro-grid {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    p {
+      color: $text-color;
+      font-size: $text;
+      padding-bottom: 24px;
+      &.small-title {
+        font-size: $sm-title;
+        color: $header-color;
+        padding-bottom: 0px;
+      }
+    }
+  }
+}
+
+//   .navbar {
+//     display: flex;
+//     flex: 1;
+//     // padding-left: 24px;
+//     // padding-right: 16px;
+
+//     .nav-left {
+//       flex: 1;
+//       justify-content: flex-start;
+//       align-items: center;
+//       align-self: center;
+
+//       .brand {
+//         font-size: 2rem;
+//         color: $header-color;
+//         padding-left: 24px;
+//       }
+//     }
+//     .nav-right {
+//       flex: 1;
+//       align-items: center;
+//       align-self: center;
+//       padding-right: 24px;
+//       text-align: right;
+
+//       a {
+//         margin-left: 24px;
+//         color: $primary-color;
+//         text-decoration: none;
+
+//         &:hover {
+//           color: darken($primary-color, 15);
+//           @include ease-out();
+//         }
+//       }
+//     }
+//   }
+// }
+.showcase {
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url(../img/travel.jpg);
+  background-size: cover;
+  text-align: center;
+
+  &:after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0,
+      rgba(0, 0, 0, 0.795) 100%
+    );
+    height: 100%;
+    content: "";
+  }
+
+  .showcase-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 3rem;
+    z-index: 2;
+    h1 {
+      font-size: $lg-title;
+      color: #fff;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: $lg-subtitle;
+      color: #fff;
+      padding: 20px 0;
+    }
+  }
+}
+// main {
+//   &#home {
+//     width: 100%;
+//   }
+//   .showcase {
+//     position: relative;
+//     height: 90vh;
+//     width: 100vw;
+//     right: 0;
+//     background-image: url(../img/travel.jpg);
+//     background-size: cover;
+//     text-align: center;
+//     margin-bottom: 24px;
+
+//     &:after {
+//       display: block;
+//       position: relative;
+//       background-image: linear-gradient(
+//         to bottom,
+//         rgba(0, 255, 255, 0) 0,
+//         #000 100%
+//       );
+
+//       height: 90vh;
+//       width: 100%;
+//       z-index: 0;
+//       content: "";
+//     }
+
+//     .showcase-text {
+//       position: absolute;
+//       bottom: 0;
+//       width: 100%;
+//       padding-bottom: 10vh;
+//       z-index: 2;
+
+//       h1,
+//       h2,
+//       a {
+//         color: $white;
+//       }
+
+//       h1 {
+//         font-size: 4rem;
+//       }
+//       h2 {
+//         font-size: 1.5rem;
+//         margin-bottom: 30px;
+//       }
+//     }
+//   }
+
+//   .home-grid {
+//     display: grid;
+//     // margin: 0 auto;
+//     padding: 24px;
+//     grid-gap: 48px;
+//     grid-template-columns: 1fr 1fr;
+//     margin: 0 auto 24px auto;
+//     max-width: 1016px;
+//     align-items: center;
+//     img {
+//       width: 100%;
+//       min-height: 200px;
+//       border-radius: 4px;
+//     }
+//   }
+
+//   .home-rides {
+//     background-color: $secondary-color;
+//     // width: 100%;
+
+//     .content {
+//       // max-width: 1016px;
+//       // padding: 24px;
+//       // margin: 0 auto;
+
+//       .pop-rides {
+//         display: flex;
+//       }
+//     }
+//   }
+// }
+
+@import "mobile";

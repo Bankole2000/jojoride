@@ -1,0 +1,19 @@
+@include mediaXl {
+}
+
+@include mediaLg {
+}
+
+@include mediaMd {
+}
+
+@include mediaSm {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+  .find-more {
+    .intro-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

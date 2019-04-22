@@ -1,0 +1,7 @@
+header FONT Color : #054752;
+primary color: #00aff5;
+grey color: #708c91;
+green: #5dd167;
+
+Paragraph font-size: 16px;
+    line-height: 20px; 

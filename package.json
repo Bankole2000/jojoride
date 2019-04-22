@@ -1,0 +1,28 @@
+{
+  "name": "jojoride",
+  "version": "1.0.0",
+  "description": "Carpool Website Project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/assets/css/ --recursive --usePolling",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bankole2000/jojoride.git"
+  },
+  "keywords": [
+    "Carpool",
+    "travel"
+  ],
+  "author": "Bankole Esan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bankole2000/jojoride/issues"
+  },
+  "homepage": "https://github.com/Bankole2000/jojoride#readme",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0"
+  }
+}
