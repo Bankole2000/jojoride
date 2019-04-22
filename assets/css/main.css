@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:600");
+@import url("https://fonts.googleapis.com/css?family=Cabin:600|Source+Sans+Pro:600");
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Cabin", sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #054752; }
+
+a,
+li {
+  text-decoration: none;
+  color: #00aff5; }
+
+.header {
+  padding: 1rem 2rem; }
+  .header .logo {
+    float: left;
+    padding: 1rem 2rem; }
+  .header .menu {
+    display: inline;
+    float: right; }
+    .header .menu .menu-item {
+      padding: 0 2rem;
+      float: right; }
