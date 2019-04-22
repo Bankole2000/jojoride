@@ -46,18 +46,24 @@ header {
   z-index: 60;
   border-bottom: 1px solid #ddd; }
   header .navbar {
-    max-width: 1200px;
+    max-width: 1160px;
     margin: 0 auto;
     flex: 1;
     display: flex; }
     header .navbar .nav-left {
       flex: 1; }
+      header .navbar .nav-left .brand {
+        font-size: 30px;
+        color: #054752; }
     header .navbar .nav-center {
       flex: 1; }
     header .navbar .nav-right {
       flex: 1;
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      font-size: 18px; }
+      header .navbar .nav-right a {
+        align-self: center; }
 
 .home-grid {
   max-width: 1016px;
@@ -113,8 +119,8 @@ header {
           display: flex;
           padding: 16px;
           background-color: #fff;
-          border-radius: 5px;
-          justify-content: space-between;
+          border-radius: 4px;
+          justify-content: space-around;
           margin-bottom: 16px; }
           .home-rides .content ul li a .ride-label {
             font-size: 18px;
@@ -122,6 +128,9 @@ header {
           .home-rides .content ul li a .ride-avg-price {
             font-size: 18px;
             color: #5dd167; }
+          .home-rides .content ul li a .fa {
+            color: #708c91;
+            align-self: center; }
 
 .find-more {
   margin: 24px auto;
@@ -150,6 +159,30 @@ header {
         font-size: 18px;
         color: #054752;
         padding-bottom: 0px; }
+
+.highlights {
+  margin: 24px auto;
+  padding: 24px;
+  max-width: 1016px; }
+  .highlights h2 {
+    font-size: 30px;
+    color: #054752;
+    padding: 24px 0; }
+  .highlights .icon-boxes {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center; }
+    .highlights .icon-boxes p {
+      font-size: 16px;
+      color: #708c91; }
+      .highlights .icon-boxes p.title {
+        font-size: 18px;
+        color: #054752; }
+    .highlights .icon-boxes .fa {
+      font-size: 60px;
+      color: #708c91;
+      padding: 24px; }
 
 .showcase {
   height: 90vh;
