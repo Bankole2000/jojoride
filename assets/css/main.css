@@ -30,6 +30,13 @@ li {
     .btn.btn-primary:hover {
       background-color: #0078a9;
       transition: all 0.3s ease-out; }
+  .btn.btn-white {
+    background-color: #fff;
+    color: #00aff5;
+    border: 1px solid #ddd; }
+    .btn.btn-white:hover {
+      background-color: #ddd;
+      color: #00aff5; }
 
 body {
   font-family: "Cabin", sans-serif;
@@ -45,24 +52,26 @@ header {
   height: 72px;
   z-index: 60;
   border-bottom: 1px solid #ddd; }
-  header .navbar {
+  header .navbar-sm {
+    display: none; }
+  header .navbar-lg {
     max-width: 1160px;
     margin: 0 auto;
     flex: 1;
     display: flex; }
-    header .navbar .nav-left {
+    header .navbar-lg .nav-left {
       flex: 1; }
-      header .navbar .nav-left .brand {
+      header .navbar-lg .nav-left .brand {
         font-size: 30px;
         color: #054752; }
-    header .navbar .nav-center {
+    header .navbar-lg .nav-center {
       flex: 1; }
-    header .navbar .nav-right {
+    header .navbar-lg .nav-right {
       flex: 1;
       display: flex;
       justify-content: space-between;
       font-size: 18px; }
-      header .navbar .nav-right a {
+      header .navbar-lg .nav-right a {
         align-self: center; }
 
 .home-grid {
@@ -142,6 +151,7 @@ header {
     padding: 24px 0;
     position: relative; }
     .find-more .title a {
+      display: inline-block;
       position: absolute;
       bottom: 0px;
       right: 0px;
@@ -214,6 +224,17 @@ header {
       color: #fff;
       padding: 20px 0; }
 
+.sm-callout {
+  display: none;
+  margin-bottom: 10px; }
+  .sm-callout h2 {
+    font-size: 30px;
+    color: #054752;
+    margin-bottom: 10px; }
+  .sm-callout a {
+    display: inline-block;
+    margin: 10px 50px; }
+
 footer {
   width: 100%;
   background-color: #ededed; }
@@ -250,8 +271,82 @@ footer {
       padding: 16px;
       font-size: 13px; }
 
+@media screen and (max-width: 768px) {
+  header {
+    height: 56px; }
+    header .navbar-lg {
+      display: none; }
+    header .navbar-sm {
+      display: flex;
+      width: 90vw;
+      margin: auto auto; }
+      header .navbar-sm .nav-left {
+        flex: 1;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start; }
+        header .navbar-sm .nav-left a {
+          align-self: center;
+          padding: 0 3vw; }
+      header .navbar-sm .nav-center {
+        flex: 1;
+        text-align: center; }
+        header .navbar-sm .nav-center a {
+          font-size: 30px;
+          align-self: center;
+          color: #054752; }
+      header .navbar-sm .nav-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 18px; }
+        header .navbar-sm .nav-right a {
+          align-self: center;
+          padding: 0 3vw; } }
+
 @media screen and (max-width: 500px) {
+  body {
+    text-align: center; }
+  .showcase {
+    height: 100vh; }
+    .showcase .showcase-text h1 {
+      font-size: 35px;
+      margin-bottom: 0px;
+      line-height: 2.5rem; }
+    .showcase .showcase-text h2 {
+      font-size: 18px; }
+  .home-rides .content {
+    padding: 24px 16px; }
+    .home-rides .content h2 {
+      line-height: 2.5rem; }
+      .home-rides .content h2 a {
+        display: none; }
   .home-grid {
     grid-template-columns: 1fr; }
-  .find-more .intro-grid {
-    grid-template-columns: 1fr; } }
+    .home-grid h2 {
+      line-height: 2.5rem; }
+  .find-more {
+    margin-bottom: 0; }
+    .find-more h2,
+    .find-more .title {
+      line-height: 2.5rem; }
+      .find-more h2 a,
+      .find-more .title a {
+        display: none; }
+    .find-more .intro-grid {
+      grid-template-columns: 1fr; }
+  .highlights {
+    margin-top: 0;
+    padding-top: 0; }
+    .highlights h2 {
+      line-height: 2.5rem; }
+    .highlights .icon-boxes {
+      grid-template-columns: 1fr; }
+  .sm-callout {
+    display: block; }
+  footer .pre-footer .social-links {
+    justify-content: center; }
+  footer .pre-footer .footer-links {
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    padding: 10px; } }
