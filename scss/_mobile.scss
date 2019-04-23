@@ -5,14 +5,76 @@
 }
 
 @include mediaMd {
+  header {
+    height: 56px;
+    .navbar-lg {
+      display: none;
+    }
+    .navbar-sm {
+      display: flex;
+      width: 90vw;
+      margin: auto auto;
+
+      .nav-left {
+        flex: 1;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        a {
+          align-self: center;
+          padding: 0 3vw;
+        }
+      }
+      .nav-center {
+        flex: 1;
+        text-align: center;
+        a {
+          font-size: $md-title;
+          align-self: center;
+          color: $header-color;
+        }
+      }
+      .nav-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        font-size: $sm-title;
+        a {
+          align-self: center;
+          padding: 0 3vw;
+        }
+      }
+    }
+  }
 }
 
 @include mediaSm {
+  body {
+    text-align: center;
+  }
+  header {
+    height: 56px;
+    .navbar-lg {
+      display: none;
+    }
+  }
+
   .home-grid {
     grid-template-columns: 1fr;
   }
   .find-more {
     .intro-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .highlights {
+    .icon-boxes {
+      grid-template-columns: 1fr;
+    }
+  }
+  footer {
+    .footer-links {
       grid-template-columns: 1fr;
     }
   }

@@ -17,7 +17,11 @@ header {
   z-index: 60;
   border-bottom: 1px solid $grey;
 
-  .navbar {
+  .navbar-sm {
+    display: none;
+  }
+
+  .navbar-lg {
     max-width: 1160px;
     margin: 0 auto;
     flex: 1;

@@ -45,24 +45,26 @@ header {
   height: 72px;
   z-index: 60;
   border-bottom: 1px solid #ddd; }
-  header .navbar {
+  header .navbar-sm {
+    display: none; }
+  header .navbar-lg {
     max-width: 1160px;
     margin: 0 auto;
     flex: 1;
     display: flex; }
-    header .navbar .nav-left {
+    header .navbar-lg .nav-left {
       flex: 1; }
-      header .navbar .nav-left .brand {
+      header .navbar-lg .nav-left .brand {
         font-size: 30px;
         color: #054752; }
-    header .navbar .nav-center {
+    header .navbar-lg .nav-center {
       flex: 1; }
-    header .navbar .nav-right {
+    header .navbar-lg .nav-right {
       flex: 1;
       display: flex;
       justify-content: space-between;
       font-size: 18px; }
-      header .navbar .nav-right a {
+      header .navbar-lg .nav-right a {
         align-self: center; }
 
 .home-grid {
@@ -250,8 +252,51 @@ footer {
       padding: 16px;
       font-size: 13px; }
 
+@media screen and (max-width: 768px) {
+  header {
+    height: 56px; }
+    header .navbar-lg {
+      display: none; }
+    header .navbar-sm {
+      display: flex;
+      width: 90vw;
+      margin: auto auto; }
+      header .navbar-sm .nav-left {
+        flex: 1;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start; }
+        header .navbar-sm .nav-left a {
+          align-self: center;
+          padding: 0 3vw; }
+      header .navbar-sm .nav-center {
+        flex: 1;
+        text-align: center; }
+        header .navbar-sm .nav-center a {
+          font-size: 30px;
+          align-self: center;
+          color: #054752; }
+      header .navbar-sm .nav-right {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 18px; }
+        header .navbar-sm .nav-right a {
+          align-self: center;
+          padding: 0 3vw; } }
+
 @media screen and (max-width: 500px) {
+  body {
+    text-align: center; }
+  header {
+    height: 56px; }
+    header .navbar-lg {
+      display: none; }
   .home-grid {
     grid-template-columns: 1fr; }
   .find-more .intro-grid {
+    grid-template-columns: 1fr; }
+  .highlights .icon-boxes {
+    grid-template-columns: 1fr; }
+  footer .footer-links {
     grid-template-columns: 1fr; } }
