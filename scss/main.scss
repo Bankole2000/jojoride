@@ -153,6 +153,7 @@ header {
     position: relative;
 
     a {
+      display: inline-block;
       position: absolute;
       bottom: 0px;
       right: 0px;
@@ -251,6 +252,21 @@ header {
       color: #fff;
       padding: 20px 0;
     }
+  }
+}
+
+.sm-callout {
+  display: none;
+  margin-bottom: 10px;
+  h2 {
+    font-size: $md-title;
+    color: $header-color;
+    margin-bottom: 10px;
+  }
+
+  a {
+    display: inline-block;
+    margin: 10px 50px;
   }
 }
 

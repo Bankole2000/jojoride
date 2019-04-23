@@ -112,4 +112,13 @@ li {
       @include ease-out();
     }
   }
+  &.btn-white {
+    background-color: $white;
+    color: $primary-color;
+    border: 1px solid $grey;
+    &:hover {
+      background-color: $grey;
+      color: $primary-color;
+    }
+  }
 }

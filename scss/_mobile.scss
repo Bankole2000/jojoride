@@ -52,30 +52,75 @@
   body {
     text-align: center;
   }
-  header {
-    height: 56px;
-    .navbar-lg {
-      display: none;
+  .showcase {
+    height: 100vh;
+    .showcase-text {
+      h1 {
+        font-size: 35px;
+        margin-bottom: 0px;
+        line-height: 2.5rem;
+      }
+      h2 {
+        font-size: $sm-title;
+      }
+    }
+  }
+  .home-rides {
+    .content {
+      padding: 24px 16px;
+      h2 {
+        line-height: 2.5rem;
+        a {
+          display: none;
+        }
+      }
     }
   }
 
   .home-grid {
     grid-template-columns: 1fr;
+    h2 {
+      line-height: 2.5rem;
+    }
   }
   .find-more {
+    margin-bottom: 0;
+    h2,
+    .title {
+      line-height: 2.5rem;
+      a {
+        display: none;
+      }
+    }
     .intro-grid {
       grid-template-columns: 1fr;
     }
   }
 
   .highlights {
+    margin-top: 0;
+    padding-top: 0;
+    h2 {
+      line-height: 2.5rem;
+    }
     .icon-boxes {
       grid-template-columns: 1fr;
     }
   }
+
+  .sm-callout {
+    display: block;
+  }
   footer {
-    .footer-links {
-      grid-template-columns: 1fr;
+    .pre-footer {
+      .social-links {
+        justify-content: center;
+      }
+      .footer-links {
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        padding: 10px;
+      }
     }
   }
 }
