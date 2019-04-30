@@ -17,8 +17,21 @@
     @include ease-out();
     overflow: hidden;
   }
-  .login-form {
-    padding-top: 72px;
+
+  #login-form {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  #signup-form {
+    display: none;
+
+    &.show {
+      display: block;
+    }
   }
 
   label {
@@ -65,6 +78,9 @@
   }
 }
 #ride-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: $white;
   position: fixed;
   height: 100vh;
@@ -75,9 +91,25 @@
   @include ease-out();
 
   &.show {
-    opacity: 0.9;
+    opacity: 1;
     transform: translate3d(0, 0, 0);
     @include ease-out();
     overflow: hidden;
+  }
+
+  #add-ride-form {
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  #search-ride-form {
+    display: none;
+
+    &.show {
+      display: block;
+    }
   }
 }
