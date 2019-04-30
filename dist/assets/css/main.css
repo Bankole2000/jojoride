@@ -38,12 +38,78 @@ li {
       background-color: #ddd;
       color: #00aff5; }
 
+#login-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  opacity: 0;
+  transform: translate3d(100vw, 0, 0);
+  transition: all 0.3s ease-out; }
+  #login-menu.show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease-out;
+    overflow: hidden; }
+  #login-menu .login-form {
+    padding-top: 72px; }
+  #login-menu label {
+    font-size: 18px;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #054752;
+    display: block; }
+  #login-menu .btn {
+    width: 100%; }
+  #login-menu .or {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center; }
+  #login-menu .or .bar {
+    flex: auto;
+    border: 1px solid #054752;
+    height: 3px;
+    background: #054752; }
+  #login-menu .or span {
+    color: #054752;
+    padding: 0 0.8rem; }
+  #login-menu input {
+    margin-bottom: 1.3rem;
+    width: 100%;
+    border-radius: 5px;
+    background: #ddd;
+    border: 1px solid #ededed;
+    color: #054752;
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    line-height: 1.3rem; }
+
+#ride-menu {
+  background: #fff;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  opacity: 0;
+  transform: translate3d(-100vw, 0, 0);
+  transition: all 0.3s ease-out; }
+  #ride-menu.show {
+    opacity: 0.9;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease-out;
+    overflow: hidden; }
+
 body {
   font-family: "Cabin", sans-serif;
   font-size: 16px;
   line-height: 20px; }
 
-header {
+.menu-btns {
   position: fixed;
   width: 100vw;
   background-color: #fff;
@@ -52,26 +118,26 @@ header {
   height: 72px;
   z-index: 60;
   border-bottom: 1px solid #ddd; }
-  header .navbar-sm {
+  .menu-btns .navbar-sm {
     display: none; }
-  header .navbar-lg {
+  .menu-btns .navbar-lg {
     max-width: 1160px;
     margin: 0 auto;
     flex: 1;
     display: flex; }
-    header .navbar-lg .nav-left {
+    .menu-btns .navbar-lg .nav-left {
       flex: 1; }
-      header .navbar-lg .nav-left .brand {
+      .menu-btns .navbar-lg .nav-left .brand {
         font-size: 30px;
         color: #054752; }
-    header .navbar-lg .nav-center {
+    .menu-btns .navbar-lg .nav-center {
       flex: 1; }
-    header .navbar-lg .nav-right {
+    .menu-btns .navbar-lg .nav-right {
       flex: 1;
       display: flex;
       justify-content: space-between;
       font-size: 18px; }
-      header .navbar-lg .nav-right a {
+      .menu-btns .navbar-lg .nav-right a {
         align-self: center; }
 
 .home-grid {
@@ -272,35 +338,35 @@ footer {
       font-size: 13px; }
 
 @media screen and (max-width: 768px) {
-  header {
+  header .menu-btns {
     height: 56px; }
-    header .navbar-lg {
+    header .menu-btns .navbar-lg {
       display: none; }
-    header .navbar-sm {
+    header .menu-btns .navbar-sm {
       display: flex;
       width: 90vw;
       margin: auto auto; }
-      header .navbar-sm .nav-left {
+      header .menu-btns .navbar-sm .nav-left {
         flex: 1;
         text-align: left;
         display: flex;
         justify-content: flex-start; }
-        header .navbar-sm .nav-left a {
+        header .menu-btns .navbar-sm .nav-left a {
           align-self: center;
           padding: 0 3vw; }
-      header .navbar-sm .nav-center {
+      header .menu-btns .navbar-sm .nav-center {
         flex: 1;
         text-align: center; }
-        header .navbar-sm .nav-center a {
+        header .menu-btns .navbar-sm .nav-center a {
           font-size: 30px;
           align-self: center;
           color: #054752; }
-      header .navbar-sm .nav-right {
+      header .menu-btns .navbar-sm .nav-right {
         flex: 1;
         display: flex;
         justify-content: flex-end;
         font-size: 18px; }
-        header .navbar-sm .nav-right a {
+        header .menu-btns .navbar-sm .nav-right a {
           align-self: center;
           padding: 0 3vw; } }
 
