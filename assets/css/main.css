@@ -55,8 +55,14 @@ li {
     transform: translate3d(0, 0, 0);
     transition: all 0.3s ease-out;
     overflow: hidden; }
-  #login-menu .login-form {
-    padding-top: 72px; }
+  #login-menu #login-form {
+    display: none; }
+    #login-menu #login-form.show {
+      display: block; }
+  #login-menu #signup-form {
+    display: none; }
+    #login-menu #signup-form.show {
+      display: block; }
   #login-menu label {
     font-size: 18px;
     line-height: 2rem;
@@ -90,6 +96,9 @@ li {
     line-height: 1.3rem; }
 
 #ride-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #fff;
   position: fixed;
   height: 100vh;
@@ -99,10 +108,18 @@ li {
   transform: translate3d(-100vw, 0, 0);
   transition: all 0.3s ease-out; }
   #ride-menu.show {
-    opacity: 0.9;
+    opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: all 0.3s ease-out;
     overflow: hidden; }
+  #ride-menu #add-ride-form {
+    display: none; }
+    #ride-menu #add-ride-form.show {
+      display: block; }
+  #ride-menu #search-ride-form {
+    display: none; }
+    #ride-menu #search-ride-form.show {
+      display: block; }
 
 body {
   font-family: "Cabin", sans-serif;
