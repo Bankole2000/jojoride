@@ -1,6 +1,6 @@
 # Jojo Ride Project
 
-Carpool website built with `html5 css3 JS php mysql`
+Work in Progress. Carpool webapp currently in development for a client. To be built with `html5 css3 JS php mysql`. [View Homepage Demo](https://bankole2000.github.io/jojoride)
 
 ## Collaborators
 
