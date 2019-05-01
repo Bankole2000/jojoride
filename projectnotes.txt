@@ -5,3 +5,20 @@ green: #5dd167;
 
 Paragraph font-size: 16px;
     line-height: 20px; 
+
+RIDE Details
+
+ride start state
+ride start district
+ride start address
+ride end state
+ride end district
+ride end address
+ride start date
+ride return trip = boolean
+ride return date = dependent on return trip true
+ride no of seats
+ride 2 max in back seat 
+ride details = varchar 255
+ride date registered
+confirm phone number via sms code

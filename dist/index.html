@@ -36,41 +36,119 @@
           </div>
           <div class="nav-center"><a href="" class="brand-sm">J</a></div>
           <div class="nav-right">
-            <a href="" class="search-rides"><i class="fa fa-search fa-lg"></i></a
+            <a href="" class="search-rides"
+              ><i class="fa fa-search fa-lg"></i></a
             ><a href="" class="add-ride"
               ><i class="fa fa-plus-circle fa-lg"></i
             ></a>
           </div>
         </div>
       </div>
-      <div id="login-menu"><div id="login-form"><div class="logo">
-          <img src="imgs/login-logo.png" alt="JojoRide Logo" />
-        </div>
-        <h1>Sign In</h1>
-        <form action="">
-          <div>
-            <label for="">Email or username</label>
-            <input type="text" class="text-input" />
+      <div id="login-menu">
+        <div id="login-form">
+          <div class="logo">
+            <img src="imgs/login-logo.png" alt="JojoRide Logo" />
           </div>
-          <div>
-            <label for="">Password</label>
-            <input type="password" class="text-input" />
+          <h1>Sign In</h1>
+          <form action="">
+            <div>
+              <label for="">Email or username</label>
+              <input type="text" class="text-input" />
+            </div>
+            <div>
+              <label for="">Password</label>
+              <input type="password" class="text-input" />
+            </div>
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </form>
+          <div class="links">
+            <a href="#">Forgot Password</a>
+            <a href="#">Sign in with Company or School</a>
           </div>
-          <button type="submit" class="btn btn-primary">Sign In</button>
-        </form>
-        <div class="links">
-          <a href="#">Forgot Password</a>
-          <a href="#">Sign in with Company or School</a>
+          <div class="or">
+            <hr class="bar" />
+            <span>OR</span>
+            <hr class="bar" />
+          </div>
+          <a href="#" class="secondary-btn signup">Create an account</a>
         </div>
-        <div class="or">
-          <hr class="bar" />
-          <span>OR</span>
-          <hr class="bar" />
-        </div>
-        <a href="#" class="secondary-btn signup">Create an account</a>
+        <div id="signup-form">Signup Form here</div>
       </div>
-    <div id="signup-form">Signup Form here</div></div></div>
-      <div id="ride-menu"><div id="add-ride-form">Add Ride Form Here</div><div id="search-ride-form">Search Ride Form Here</div></div>
+      <div id="ride-menu">
+        <div id="add-ride-form">
+          <h1>Offer a ride on your next journey</h1>
+          <div class="add-ride-progress"></div>
+          <div class="ride-details">
+            <div class="ride-destination">
+              <h3>Pickup and Drop-off Points</h3>
+              <form action="">
+                <div>
+                  <label for="startState">State</label>
+                  <input type="text" id="startState" />
+                </div>
+                <div>
+                  <label for="startDistrict">District</label>
+                  <input type="text" id="startDistrict" />
+                </div>
+                <div>
+                  <label for="endState">State</label>
+                  <input type="text" id="endState" />
+                </div>
+                <div>
+                  <label for="endDistrict">District</label>
+                  <input type="text" id="endDistrict" />
+                </div>
+              </form>
+            </div>
+            <div class="ride-time">
+              <form action="">
+                <div>
+                  <label for="startState">Date &amp; Time</label>
+                  <input type="datetime" name="" id="startDate" />
+                </div>
+                <div>
+                  Is this a 2-way Trip?
+                  <input type="checkbox" name="Return Trip" id="returnTrip" />
+                </div>
+                <div>
+                  <label for="startDistrict">Return Date</label>
+                  <input type="datetime" name="" id="returnDate" />
+                </div>
+                <div>
+                  <label for="seats">Available Seats</label>
+                  <input type="number" id="seats" />
+                </div>
+                <input type="checkbox" name="backSeatMax" id="backSeatMax" />
+                <div>
+                  <label for="startState">Date &amp; Time</label>
+                  <input type="datetime" name="" id="startDate" />
+                </div>
+                <div>
+                  <label for="details">Ride &amp; Details</label>
+                  <input type="text" name="" id="details" />
+                </div>
+                <div>
+                  <label for="description">Ride &amp; Description</label>
+                  <textarea type="text" name="" id="description"></textarea>
+                </div>
+                <div>
+                  <label for="priceOffered">Ride &amp; priceOffered</label>
+                  <textarea type="text" name="" id="priceOffered"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="progressBtns"></div>
+          </div>
+          <div class="ride-details">
+            <a href="" class="ride-back"
+              ><i class="fa fa-arrow-left"></i> Back</a
+            ><a href="" class="ride-next"
+              >Forward <i class="fa fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+        <div id="search-ride-form"><h1>Find a Ride</h1></div>
+      </div>
     </header>
     <main id="home">
       <div class="showcase">
@@ -227,6 +305,8 @@
         </p>
       </div>
     </footer>
+
+    <script src="assets/js/ride.js"></script>
 
     <script src="assets/js/app.js"></script>
   </body>
