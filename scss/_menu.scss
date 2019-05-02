@@ -34,15 +34,7 @@
     }
   }
 
-  label {
-    font-size: $sm-title;
-    line-height: 2rem;
-    font-weight: 500;
-    color: $header-color;
-    display: block;
-  }
-
-  .btn {
+   .btn {
     width: 100%;
   }
 
@@ -64,19 +56,8 @@
     color: $header-color;
     padding: 0 0.8rem;
   }
-
-  input {
-    margin-bottom: 1.3rem;
-    width: 100%;
-    border-radius: 5px;
-    background: $grey;
-    border: 1px solid $light-grey;
-    color: $header-color;
-    font-size: $sm-title;
-    padding: 0.5rem 1rem;
-    line-height: 1.3rem;
-  }
 }
+
 #ride-menu {
   display: flex;
   align-items: center;
