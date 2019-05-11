@@ -217,12 +217,12 @@
                   >Pick a Time <i class="material-icons right">schedule</i>
                 </label>
               </div>
-              <a href="search.html">
-                <button type="submit" class="btn">
-                  Find a Ride <i class="material-icons right">search</i>
-                </button></a
-              >
             </form>
+            <a href="search.html">
+              <button class="btn">
+                Find a Ride <i class="material-icons right">search</i>
+              </button></a
+            >
           </div>
           <div class="gap"></div>
           <div class="or">
@@ -231,7 +231,7 @@
             <hr class="bar" />
           </div>
           <a href="search.html">
-            <button href="#" class="btn blue signup">
+            <button class="btn blue">
               View All Rides <i class="material-icons right">local_taxi</i>
             </button></a
           >
@@ -364,6 +364,60 @@
         <a href="" class="btn btn-white add-ride">Offer a Ride</a>
       </div>
     </main>
+    <div class="loader">
+      <!-- <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="spinner-layer spinner-red">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="spinner-layer spinner-yellow">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <div class="spinner-layer spinner-green">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div> -->
+      <div class="progress" style="width: 50vw;">
+        <div class="indeterminate"></div>
+      </div>
+    </div>
     <footer>
       <div class="pre-footer">
         <div class="footer-links">
@@ -403,6 +457,9 @@
     <script src="assets/js/ride.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
+      $(window).on("load", function() {
+        $(".loader").fadeOut("slow");
+      });
       $(document).ready(function() {
         $("select").formSelect();
         $(".datepicker").datepicker();
