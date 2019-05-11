@@ -41,7 +41,12 @@ li {
     transition: all 0.3s ease-out;
     overflow: hidden; }
   #login-menu #login-form {
-    display: none; }
+    display: none;
+    min-width: 280px;
+    max-width: 400px;
+    padding: auto;
+    margin: auto;
+    text-align: center; }
     #login-menu #login-form.show {
       display: block; }
   #login-menu #signup-form {
@@ -53,7 +58,7 @@ li {
   #login-menu .or {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.2rem;
+    margin: 0.7rem 0;
     align-items: center; }
   #login-menu .or .bar {
     flex: auto;
@@ -89,6 +94,8 @@ li {
     display: none; }
     #ride-menu #search-ride-form.show {
       display: block; }
+  #ride-menu a {
+    margin: 10px auto; }
 
 body {
   font-family: "Cabin", sans-serif;
@@ -366,6 +373,9 @@ footer {
 @media screen and (max-width: 500px) {
   body {
     text-align: center; }
+  #login-form.show {
+    max-width: 280px;
+    padding: 20px; }
   .showcase {
     height: 100vh; }
     .showcase .showcase-text h1 {
