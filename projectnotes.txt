@@ -6,6 +6,9 @@ green: #5dd167;
 Paragraph font-size: 16px;
     line-height: 20px; 
 
+
+
+
 RIDE Details
 
 ride start state
@@ -22,3 +25,160 @@ ride 2 max in back seat
 ride details = varchar 255
 ride date registered
 confirm phone number via sms code
+
+Discussion Friday 3rd May 2019
+What do we want to build
+    Carpool website
+
+    Functions
+    Users can register
+    Users Can Offer a ride
+        Luggage size?
+        Car Details - No of available seats
+        how many people sit in a row
+        Luggage size
+    Users can Find and join a ride
+        Search for Rides based on 
+            start point (state)
+            End Point (state)
+            Time
+    SMS authentication 
+    Rating System ( LTG )
+    Pricing System ()?  Driver sets the price based on amenities and vehicle etc
+
+    User can upload images of vehicle
+    Driver Identification ?
+    Driver License ? Validation ?
+    Should Admin Panel
+
+    Payment Process => 
+    100% - 2% paystack 
+    - 18% admin 
+    - 80% driver
+    - weekly payouts
+    - subscription fee??
+    - Pay out system 
+
+    Internal Admin accounting system 
+
+
+    Ideas => API for Checking Driver's License (VIO API)
+
+
+Milestones
+
+Tools to use
+
+Finance 
+
+Design 
+
+
+Database Structure
+
+List of Tables
+1. Users table
+2. Admin Table
+3. Chat Table
+4. Rides Table
+5. States Table https://gist.github.com/segebee/5dec39398e719fdfd0ef
+6. Banks Table
+7. Bookings Table
+8. Support Table
+9. Super Admin Table
+10. Vehicle Table
+	
+	Vehicle Brand Table
+	- vehicle id
+	- brand 
+
+	Vehicle Type table
+	- type id
+	- type
+	- image
+
+	Booking Table
+	- Booking Id
+	- Booker Id
+	- Ride Id
+	- Price
+	- fulfilled (boolean)
+	- rating
+
+	Used Vehicles
+	- id
+	- owner/user id
+	- type
+	- brand
+	- model & year
+	- plate number
+
+    Rides Table 
+	- ride id
+	- ride offerer id
+	- ride start address 
+	- ride start LGA id
+	- ride start state id
+	- ride end address
+	- ride end LGA id
+	- ride end state id
+	- ride description
+	- ride start Time
+	- ride eta time
+	- vehicle type id
+	- vehicle brand id
+	- vehicle name/model year
+	- vehicle plate number
+	- seats offered
+	- seats taken
+	- allow private booking - note that you can't cancel a private booking
+	- private booking cost
+	- private booking max seating
+	- luggage capacity
+	- AC
+	- baby
+	- radio
+	- movie
+	- price offered
+	- registered time
+	
+    Banks Table
+	- bank id
+	- bank
+	- logo [blog]
+
+    Chat Table
+	- chat id
+	- chat user id
+	- chat message
+	- chat date
+
+    Super Admin Table
+	- id
+	- first name
+	- last name
+	- email	
+	- password
+
+    User Table
+	- user id
+	- First Name
+	- Last Name
+	- email
+	- password
+	- Phone Number (verify)
+	- verified phone
+	- gender
+	- profile image
+	- verified driver
+	- driver verified id
+	- sign up date
+	- Account Balance
+	- Bank id
+	- Account Number
+	- outstanding / credit
+	- suspended
+	
+
+
+
