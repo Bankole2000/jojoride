@@ -20,6 +20,11 @@
 
   #login-form {
     display: none;
+    min-width: 280px;
+    max-width: 400px;
+    padding: auto;
+    margin: auto;
+    text-align: center;
 
     &.show {
       display: block;
@@ -34,14 +39,14 @@
     }
   }
 
-   .btn {
+  .btn {
     width: 100%;
   }
 
   .or {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1.2rem;
+    margin: 0.7rem 0;
     align-items: center;
   }
 

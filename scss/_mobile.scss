@@ -54,6 +54,13 @@
   body {
     text-align: center;
   }
+
+  #login-form {
+    &.show {
+      max-width: 280px;
+      padding: 20px;
+    }
+  }
   .showcase {
     height: 100vh;
     .showcase-text {
