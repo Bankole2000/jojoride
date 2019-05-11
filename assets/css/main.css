@@ -63,7 +63,7 @@ li {
   #login-menu .or .bar {
     flex: auto;
     border: 1px solid #054752;
-    height: 3px;
+    height: 1px;
     background: #054752; }
   #login-menu .or span {
     color: #054752;
@@ -91,11 +91,29 @@ li {
     #ride-menu #add-ride-form.show {
       display: block; }
   #ride-menu #search-ride-form {
-    display: none; }
+    display: none;
+    min-width: 280px;
+    max-width: 400px;
+    padding: auto;
+    margin: auto;
+    text-align: center; }
+    #ride-menu #search-ride-form div .input-field {
+      margin: 4px 0; }
     #ride-menu #search-ride-form.show {
       display: block; }
-  #ride-menu a {
-    margin: 10px auto; }
+  #ride-menu .or {
+    display: flex;
+    flex-direction: row;
+    margin: -10px 0 0.7rem 0;
+    align-items: center; }
+  #ride-menu .or .bar {
+    flex: auto;
+    border: 1px solid #054752;
+    height: 1px;
+    background: #054752; }
+  #ride-menu .or span {
+    color: #054752;
+    padding: 0 0.8rem; }
 
 body {
   font-family: "Cabin", sans-serif;
