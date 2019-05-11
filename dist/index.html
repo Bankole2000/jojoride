@@ -164,7 +164,74 @@
             ></a>
           </div>
         </div>
-        <div id="search-ride-form"><h1>Find a Ride</h1></div>
+        <div id="search-ride-form">
+          <h3>Find a Ride</h3>
+
+          <div class="row">
+            <form action="">
+              <div class="input-field col s5">
+                <select>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="1">Lagos</option>
+                  <option value="2">Abuja</option>
+                  <option value="3">Delta</option>
+                </select>
+                <label>From Where</label>
+              </div>
+              <div class="input-field col s7">
+                <select>
+                  <option value="" disabled selected>Select LGA</option>
+                  <option value="1">Galadimawa LGA</option>
+                  <option value="2">Birnin Kebbi</option>
+                  <option value="3">Port-Harcourt</option>
+                </select>
+              </div>
+
+              <div class="input-field col s5">
+                <select>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="1">Lagos</option>
+                  <option value="2">Abuja</option>
+                  <option value="3">Delta</option>
+                </select>
+                <label>To Where</label>
+              </div>
+              <div class="input-field col s7">
+                <select>
+                  <option value="" disabled selected>Select LGA</option>
+                  <option value="1">Gudu LGA</option>
+                  <option value="2">Ugbowo LGA</option>
+                  <option value="3">Ijero LGA</option>
+                  <option value="4">Ethiope East</option>
+                </select>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="datepicker" id="date" /><label
+                  for="date"
+                  >Pick a Date <i class="material-icons right">event</i>
+                </label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="timepicker" id="time" /><label
+                  for="time"
+                  >Pick a Time <i class="material-icons right">schedule</i>
+                </label>
+              </div>
+              <button type="submit" class="btn">
+                Find a Ride <i class="material-icons right">search</i>
+              </button>
+            </form>
+          </div>
+          <div class="gap"></div>
+          <div class="or">
+            <hr class="bar" />
+            <span>OR</span>
+            <hr class="bar" />
+          </div>
+          <button href="#" class="btn blue signup">
+            View All Rides <i class="material-icons right">local_taxi</i>
+          </button>
+        </div>
       </div>
     </header>
     <main id="home">
@@ -172,7 +239,9 @@
         <div class="showcase-text">
           <h1 class="lg-heading">Ada. JojoRide. Bae.</h1>
           <h2 class="sm-heading">Share your travel costs with our community</h2>
-          <a href="#!" class="btn-large blue search-rides">Find a Ride</a>
+          <a href="#!" class="btn-large blue search-rides"
+            >Find a Ride <i class="material-icons right">search</i>
+          </a>
         </div>
       </div>
 
@@ -325,8 +394,16 @@
       </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/js/materialize.min.js"></script>
     <script src="assets/js/ride.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("select").formSelect();
+        $(".datepicker").datepicker();
+        $(".timepicker").timepicker();
+      });
+    </script>
   </body>
 </html>
