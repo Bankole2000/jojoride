@@ -88,30 +88,31 @@ List of Tables
 9. Super Admin Table
 10. Vehicle Table
 	
-	Vehicle Brand Table
+    Vehicle Brand Table
 	- vehicle id
 	- brand 
 
-	Vehicle Type table
+    Vehicle Type table
 	- type id
 	- type
 	- image
 
-	Booking Table
+    Booking Table
 	- Booking Id
 	- Booker Id
 	- Ride Id
 	- Price
 	- fulfilled (boolean)
 	- rating
-
-	Used Vehicles
+    Used Vehicles
 	- id
 	- owner/user id
 	- type
 	- brand
 	- model & year
 	- plate number
+	- ride id
+	- color
 
     Rides Table 
 	- ride id
@@ -145,10 +146,11 @@ List of Tables
     Banks Table
 	- bank id
 	- bank
-	- logo [blog]
+	- logo [blob]
 
     Chat Table
 	- chat id
+	- chat_ride_id
 	- chat user id
 	- chat message
 	- chat date
@@ -178,7 +180,104 @@ List of Tables
 	- Account Number
 	- outstanding / credit
 	- suspended
+	- logged in
 	
 
 
 
+list of Vehicle Brands
+
+AC
+Acura
+Aixam
+Alfa Romeo
+Aston Martin
+Audi
+Dacia
+Bentley
+BMW
+Bufori
+Bugatti
+Buick
+Cadillac
+Chevrolet
+Chrysler
+Citroen
+Daihatsu
+Dodge
+DR Motor
+Ferrari
+Fiat
+Fisker
+Ford
+GMC
+Holden
+Honda
+Hyundai
+Infiniti
+Jaguar
+Jeep
+Kia
+Koenigsegg
+Lada
+Lamborghini
+Lancia
+Land Rover
+Lexus
+Lincoln
+Lobini
+Lotus
+Marcos
+Marussia
+Maserati
+Mastretta
+Maybach
+Mazda
+Mercedes-Benz
+MG
+Mini
+Mitsubishi
+Morgan
+Nissan
+Noble
+Opel
+Pagani
+Perodua
+Peugeot
+Porsche
+Proton
+Renault
+Rolls Royce
+Rover
+Scion
+SEAT
+Skoda Auto
+Spyker
+SsangYong
+Subaru
+Suzuki
+TAC Motors
+Tesla
+Toyota
+Vauxhall
+Volkswagen
+Volvo
+
+
+
+
+Login Information at Cross Over
+
+rkxruqs9n7euza
+
+QVFRvzIjoa
+
+
+Address Details
+
+No 3, Egina Street Gaduwa Coop Estate, Gaduwa, Duromi III - Garki Rural District
+
+Zip Code 900104
+
+Microsoft Account Recovery Code
+9FS27-NUT4P-QX8U5-H8U6Y-4VF5B
