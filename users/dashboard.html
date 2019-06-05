@@ -10,6 +10,7 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="../assets/css/materialize.min.css">
     <link rel="stylesheet" href="../assets/css/main.css" />
     <title>JojoRide &#8226; Dashboard</title>
@@ -151,7 +152,7 @@
             <div id="search-ride-form"><h1>Find a Ride</h1></div>
           </div>
         </header>
-        <ul id="slide-out" class="sidenav">
+        <ul id="slide-out" class="sidenav" style="text-align: left;">
           <li><div class="user-view">
             <div class="background">
               <img src="../assets/img/vintagecar.jpg">
@@ -160,14 +161,37 @@
             <a href="#name"><span class="white-text name">John Doe</span></a>
             <a href="#email"><span class="white-text email">johndoe@gmail.com</span></a>
           </div></li>
-          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-          <li><a href="#!">Second Link</a></li>
+          
+          <li class="active blue-grey-text text-darken-4"><a href="dashboard.html" class="blue-grey-text text-darken-4"><i class="material-icons blue-grey-text text-darken-4">dashboard</i><span class="black-text">Dashboard</span></a></li>
+          <li><a href="profile.html"><i class="material-icons orange-text">person</i>My Profile <span class="new badge orange pulse">Incomplete</span></a>  </li>
           <li><div class="divider"></div></li>
-          <li><a class="subheader">Subheader</a></li>
-          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+          
+          <li><a class="waves-effect" href="bookings.html"><i class="material-icons green-text">event</i>Bookings <span class="new badge green pulse">99+</span></a></li>
+          <li><a class="waves-effect" href="rides.html"><i class="material-icons blue-text">airline_seat_recline_extra</i>Rides Offered<span class="new badge blue pulse">99+</span></a></li>
+          <li><a class="waves-effect" href="vehicles.html"><i class="material-icons">time_to_leave</i>Vehicles</a></li>
+          <li><a class="waves-effect" href="account.html"><i class="material-icons">payment</i>Account</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="waves-effect" href="support.html"><i class="material-icons">settings</i>Support Tickets</a></li>
+          <li><a class="waves-effect" href="info.html"><i class="material-icons">info</i>Info & FAQs</a></li>
+          
+          <li><a class="waves-effect" href="../index.html"><i class="material-icons">backspace</i>Logout</a></li>
+        
         </ul>
 
-        
+        <section class="parallax-container section" style="height: 250px;">
+        <div style="background-color: rgba(0,0,0,0.5); top: 0; left: 0; width: 100%; min-height: 500px; padding-top: 20px;">
+        <div class="row center" style="margin-top: 150px;">
+        <div class="container">
+          <h3 class="white-text">Dashboard</h3>
+        </div>
+        </div>
+        </div>
+        <div class="parallax">
+          <img src="../assets/img/taxi.jpg" alt="">
+        </div>
+        </section>
+
+
   <!-- <div class="navbar-fixed">
       <nav>
           <div class="nav-wrapper">
