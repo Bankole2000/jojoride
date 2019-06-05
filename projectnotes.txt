@@ -235,6 +235,58 @@ Maybach
 Mazda
 Mercedes-Benz
 MG
+
+
+LIST OF JOJORISE SITE PAGES
+
+USER AREA
+	HOME page
+	Search Results Page
+	Ride Offer Details page
+	Ride Details page
+	
+	USER DASHBOARD Page
+	Bookings List Page
+	Booking Details Page
+	Rides Offered list Page
+	Ride Details Page
+	Vehicles List Page
+	Vehicle Details Page
+	Transactions List Page
+	Transaction Details page
+	Support Tickets list Page
+	Support Ticket Details Page
+	Profile Page
+	Profile Details Page
+
+ADMIN AREA
+	Admin Home Page
+	Admin Dashboard
+	Users Page - User Details Page
+	Rides Page - Rides Details Page
+	Bookings Page - Booking Details Page
+	Accounts Page - Accounts Details Page
+	Support Tickets - Ticket Details Page
+	
+PAYMENT AREA
+	Payment Processing Page
+	Payment Declined Page
+	Payment Approved Page
+	
+INFO AREA
+	FAQ page
+	Guidelines Page
+	Privacy Policy
+	About Team Page
+	Contact Page
+	Terms and Conditions Page
+	WORDPRESS BLOG
+
+OTHER PAGES
+	404 PAGE
+	Thanks for signing Up Page
+
+
 Mini
 Mitsubishi
 Morgan

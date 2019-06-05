@@ -1,3 +1,6 @@
+//Initializations
+
+
 // GET UI Elements
 const loginMenu = document.getElementById("login-menu");
 const rideMenu = document.getElementById("ride-menu");

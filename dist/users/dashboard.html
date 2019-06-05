@@ -27,12 +27,13 @@
                 <a href="" class="add-ride"
                   ><i class="fa fa-plus-circle fa-lg"></i> Offer a Ride</a
                 >
-                <a  style="align-self: center;"> Username <img src="../assets/img/users/user-2517433_640.png" alt="" class="circle" width="50px" ></a>
+                <a  style="align-self: center;" data-target="slide-out" class="sidenav-trigger"> Username <img style="vertical-align: middle;" src="../assets/img/users/user-2517433_640.png" alt="" class="circle" width="50px" ></a>
               </div>
             </div>
             <div class="navbar-sm">
               <div class="nav-left">
-                <a href="" class="login"><i class="fa fa-user-circle fa-lg"></i></a>
+                <!-- <i href="" class="login"><i class="fa fa-user-circle fa-lg"></i></a> -->
+                <a href="" data-target="slide-out" class="sidenav-trigger"><img style="vertical-align: middle;" src="../assets/img/users/user-2517433_640.png" alt="" class="circle" width="30px" ></a>
               </div>
               <div class="nav-center"><a href="" class="brand-sm">J</a></div>
               <div class="nav-right">
@@ -150,6 +151,23 @@
             <div id="search-ride-form"><h1>Find a Ride</h1></div>
           </div>
         </header>
+        <ul id="slide-out" class="sidenav">
+          <li><div class="user-view">
+            <div class="background">
+              <img src="../assets/img/vintagecar.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="../assets/img/users/user-2517433_640.png"></a>
+            <a href="#name"><span class="white-text name">John Doe</span></a>
+            <a href="#email"><span class="white-text email">johndoe@gmail.com</span></a>
+          </div></li>
+          <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+          <li><a href="#!">Second Link</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader">Subheader</a></li>
+          <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+
+        
   <!-- <div class="navbar-fixed">
       <nav>
           <div class="nav-wrapper">
@@ -200,8 +218,15 @@
         </p>
       </div>
     </footer>
+    <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/materialize.min.js"></script>
     <script src="../assets/js/ride.js"></script>
     <script src="../assets/js/app.js"></script>
+    <script>
+     $(document).ready(function(){
+      M.AutoInit();
+    // $('.sidenav').sidenav();
+      });
+    </script>
   </body>
 </html>
