@@ -333,3 +333,35 @@ Zip Code 900104
 
 Microsoft Account Recovery Code
 9FS27-NUT4P-QX8U5-H8U6Y-4VF5B
+
+
+
+									<p>
+                    <label>
+                      <input name="group1" type="radio" class="with-gap" checked />
+                      <span>Select a Registered Vehicle</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" class="with-gap" />
+                      <span>Use a New Vehicle</span>
+                    </label>
+                  </p>
+              <div class="input-field col s5">
+                <select>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="1">Lagos</option>
+                  <option value="2">Abuja</option>
+                  <option value="3">Delta</option>
+                </select>
+                <label>Select Vehicle</label>
+              </div>
+              <div class="input-field col s7">
+                <select>
+                  <option value="" disabled selected>Select LGA</option>
+                  <option value="1">Galadimawa LGA</option>
+                  <option value="2">Birnin Kebbi</option>
+                  <option value="3">Port-Harcourt</option>
+                </select>
+              </div>
