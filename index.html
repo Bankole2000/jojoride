@@ -95,7 +95,7 @@
         <div id="add-ride-form">
           <h1>Offer a ride on your next journey</h1>
           <div class="add-ride-progress"></div>
-          <div class="ride-details">
+          <!-- <div class="ride-details">
             <div class="ride-destination">
               <h3>Pickup and Drop-off Points</h3>
               <form action="">
@@ -155,12 +155,165 @@
               </form>
             </div>
             <div class="progressBtns"></div>
+          </div> -->
+          <div id="add-ride-space" style="overflow: hidden; position: relative;">
+            <div class="row" id="1">
+              <div class="input-field col s5">
+                <select>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="1">Lagos</option>
+                  <option value="2">Abuja</option>
+                  <option value="3">Delta</option>
+                </select>
+                <label>From Where</label>
+              </div>
+              <div class="input-field col s7">
+                <select>
+                  <option value="" disabled selected>Select LGA</option>
+                  <option value="1">Galadimawa LGA</option>
+                  <option value="2">Birnin Kebbi</option>
+                  <option value="3">Port-Harcourt</option>
+                </select>
+              </div>
+              <div class="input-field col s5">
+                <select>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="1">Lagos</option>
+                  <option value="2">Abuja</option>
+                  <option value="3">Delta</option>
+                </select>
+                <label>To Where</label>
+              </div>
+              <div class="input-field col s7">
+                <select>
+                  <option value="" disabled selected>Select LGA</option>
+                  <option value="1">Gudu LGA</option>
+                  <option value="2">Ugbowo LGA</option>
+                  <option value="3">Ijero LGA</option>
+                  <option value="4">Ethiope East</option>
+                </select>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="datepicker" id="date" /><label
+                  for="date"
+                  >Pick a Date <i class="material-icons right">event</i>
+                </label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="timepicker" id="time" /><label
+                  for="time"
+                  >Pick a Time <i class="material-icons right">schedule</i>
+                </label>
+              </div>
+            </div>
+            <div class="row show-out-right" id="2">
+                <p>
+                    <label>
+                      <input name="group1" type="radio" class="with-gap" checked />
+                      <span>Select a Registered Vehicle</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" class="with-gap" />
+                      <span>Use a New Vehicle</span>
+                    </label>
+                  </p>
+              <div class="input-field col s5">
+                <select>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="1">Lagos</option>
+                  <option value="2">Abuja</option>
+                  <option value="3">Delta</option>
+                </select>
+                <label>Select Vehicle</label>
+              </div>
+              <div class="input-field col s7">
+                <select>
+                  <option value="" disabled selected>Select LGA</option>
+                  <option value="1">Galadimawa LGA</option>
+                  <option value="2">Birnin Kebbi</option>
+                  <option value="3">Port-Harcourt</option>
+                </select>
+              </div>
+              <div class="input-field col s12">
+                <div>
+                  <label for="description">Ride &amp; Description</label>
+                  <textarea type="text" name="" id="description"></textarea>
+                </div>
+                <div>
+                  <label for="priceOffered">Ride &amp; priceOffered</label>
+                  <textarea type="text" name="" id="priceOffered"></textarea>
+                </div>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="datepicker" id="date" /><label
+                  for="date"
+                  >Pick a Date <i class="material-icons right">event</i>
+                </label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="timepicker" id="time" /><label
+                  for="time"
+                  >Pick a Time <i class="material-icons right">schedule</i>
+                </label>
+              </div>
+            </div>
+            <div class="row show-out-right" id="3">
+              <div class="input-field col s5">
+                <select>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="1">Lagos</option>
+                  <option value="2">Abuja</option>
+                  <option value="3">Delta</option>
+                </select>
+                <label>From Where</label>
+              </div>
+              <div class="input-field col s7">
+                <select>
+                  <option value="" disabled selected>Select LGA</option>
+                  <option value="1">Galadimawa LGA</option>
+                  <option value="2">Birnin Kebbi</option>
+                  <option value="3">Port-Harcourt</option>
+                </select>
+              </div>
+              <div class="input-field col s5">
+                <select>
+                  <option value="" disabled selected>Select State</option>
+                  <option value="1">Lagos</option>
+                  <option value="2">Abuja</option>
+                  <option value="3">Delta</option>
+                </select>
+                <label>To Where</label>
+              </div>
+              <div class="input-field col s7">
+                <select>
+                  <option value="" disabled selected>Select LGA</option>
+                  <option value="1">Gudu LGA</option>
+                  <option value="2">Ugbowo LGA</option>
+                  <option value="3">Ijero LGA</option>
+                  <option value="4">Ethiope East</option>
+                </select>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="datepicker" id="date" /><label
+                  for="date"
+                  >Pick a Date <i class="material-icons right">event</i>
+                </label>
+              </div>
+              <div class="input-field col s6">
+                <input type="text" class="timepicker" id="time" /><label
+                  for="time"
+                  >Pick a Time <i class="material-icons right">schedule</i>
+                </label>
+              </div>
+            </div>
           </div>
           <div class="ride-details">
-            <a href="" class="ride-back"
+            <a href="" id="ride-back" class="waves-effect btn" data-to="0"
               ><i class="fa fa-arrow-left"></i> Back</a
-            ><a href="" class="ride-next"
-              >Forward <i class="fa fa-arrow-right"></i
+            ><a href="" id="ride-next" class="waves-effect btn" data-to="5"
+              >Next <i class="fa fa-arrow-right"></i
             ></a>
           </div>
         </div>
@@ -452,18 +605,22 @@
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/materialize.min.js"></script>
-    <script src="assets/js/ride.js"></script>
+    <!-- <script src="assets/js/ride.js"></script> -->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/validate.js"></script>
     <script>
       $(window).on("load", function() {
         $(".loader").fadeOut("slow");
       });
       $(document).ready(function() {
         M.AutoInit();
-        // $("select").formSelect();
-        // $(".datepicker").datepicker();
-        // $(".timepicker").timepicker();
       });
+
+      
+    let name_reg=/^[a-z]{3,}$/i;
+    let email_reg=/^[a-z]+(_|\.)?[a-z0-9]*@[a-z]+\.[a-z]{2,}$/i;
+    let password_reg=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/i;
+   
     </script>
   </body>
 </html>
