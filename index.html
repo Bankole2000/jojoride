@@ -89,74 +89,72 @@
             >Create a New Account <i class="fa fa-user-plus"></i>
           </a>
         </div>
-        <div id="signup-form">Signup Form here</div>
+        <div id="signup-form">
+            <h3>Sign up</h3>
+            <div class="signup-progress"></div>
+           <div id="signup-space">
+              <div class="row" id="s1">
+                <h5>Signup - 1</h5>
+                <div class="input-field col s6">
+                    <input placeholder="John" id="disabled5" type="text" class="validate">
+                    <label for="disabled5">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Smith" id="disabled6" type="text" class="validate">
+                    <label for="disabled6">Last Name</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="johnsmith@example.com" id="disabled6" type="email" class="validate">
+                    <label for="disabled6">Email</label>
+                </div>
+                <div class="input-field col s5">
+                  <select>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                  </select>
+                  <label>Select Gender</label>
+                </div>
+                <div class="input-field col s7">
+                  <input type="text" class="datepicker" id="date" /><label
+                    for="date"
+                    >BirthDate <i class="material-icons right">event</i>
+                  </label>
+                </div>
+                
+              </div>
+              <div class="row show-out-right" id="s2">
+                  <h5>Signup - 2</h5>
+                  <div class="input-field col s12 m6">
+                      <input placeholder="08012345678" id="disabled" type="text" class="validate">
+                      <label for="disabled">Phone Number</label>
+                  </div>
+                  <div class="input-field col s12">
+                      <input placeholder="Destination address" id="disabled" type="text" class="validate">
+                      <label for="disabled">Password</label>
+                  </div>
+                  <div class="input-field col s12">
+                      <input placeholder="Destination address" id="disabled" type="text" class="validate">
+                      <label for="disabled">Password</label>
+                  </div>
+                  
+                </div>
+             </div>
+            <div class="signup-details">
+              <a href="" id="signup-back" class="waves-effect btn" data-to="0"
+                ><i class="fa fa-arrow-left"></i> Back</a
+              ><a href="" id="signup-next" class="waves-effect btn" data-to="1"
+                >Next <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
       </div>
       <div id="ride-menu">
         <div id="add-ride-form">
           <h3>Offer a ride</h3>
           <div class="add-ride-progress"></div>
-          <!-- <div class="ride-details">
-            <div class="ride-destination">
-              <h3>Pickup and Drop-off Points</h3>
-              <form action="">
-                <div>
-                  <label for="startState">State</label>
-                  <input type="text" id="startState" />
-                </div>
-                <div>
-                  <label for="startDistrict">District</label>
-                  <input type="text" id="startDistrict" />
-                </div>
-                <div>
-                  <label for="endState">State</label>
-                  <input type="text" id="endState" />
-                </div>
-                <div>
-                  <label for="endDistrict">District</label>
-                  <input type="text" id="endDistrict" />
-                </div>
-              </form>
-            </div>
-            <div class="ride-time">
-              <form action="">
-                <div>
-                  <label for="startState">Date &amp; Time</label>
-                  <input type="datetime" name="" id="startDate" />
-                </div>
-                <div>
-                  Is this a 2-way Trip?
-                  <input type="checkbox" name="Return Trip" id="returnTrip" />
-                </div>
-                <div>
-                  <label for="startDistrict">Return Date</label>
-                  <input type="datetime" name="" id="returnDate" />
-                </div>
-                <div>
-                  <label for="seats">Available Seats</label>
-                  <input type="number" id="seats" />
-                </div>
-                <input type="checkbox" name="backSeatMax" id="backSeatMax" />
-                <div>
-                  <label for="startState">Date &amp; Time</label>
-                  <input type="datetime" name="" id="startDate" />
-                </div>
-                <div>
-                  <label for="details">Ride &amp; Details</label>
-                  <input type="text" name="" id="details" />
-                </div>
-                <div>
-                  <label for="description">Ride &amp; Description</label>
-                  <textarea type="text" name="" id="description"></textarea>
-                </div>
-                <div>
-                  <label for="priceOffered">Ride &amp; priceOffered</label>
-                  <textarea type="text" name="" id="priceOffered"></textarea>
-                </div>
-              </form>
-            </div>
-            <div class="progressBtns"></div>
-          </div> -->
-          <div id="add-ride-space" style="overflow: hidden; position: relative;">
+         
+          <div id="add-ride-space">
             <div class="row" id="1">
               <h5>Ride Details - 1</h5>
               <div class="input-field col s5">
@@ -195,8 +193,8 @@
                 </select>
               </div>
               <div class="input-field col s6">
-                <input type="text" class="datepicker" id="date" /><label
-                  for="date"
+                <input type="text" class="datepicker" id="date2" /><label
+                  for="date2"
                   >Pick a Date <i class="material-icons right">event</i>
                 </label>
               </div>
@@ -222,14 +220,12 @@
                     <label for="textarea1">Ride Description</label>
                 </div>
               </div>
-                
-              
             <div class="row show-out-right" id="3">
                 <h5>Ride Details - 3</h5>
                 <div class="col s12"> 
-                <p>
+                  <p>
                     <label>
-                      <input name="group1" type="radio" class="with-gap" checked />
+                      <input name="group2" type="radio" class="with-gap" checked />
                       <span>Select a Previously Registered Vehicle</span>
                     </label>
                   </p>
@@ -249,7 +245,7 @@
                     </label>
                   </p>
                 </div>
-              <div class="input-field col s5">
+              <div class="input-field col s6">
                 <select>
                   <option value="" disabled selected>Select Type</option>
                   <option value="1">SUV</option>
@@ -261,7 +257,7 @@
                 </select>
                 <label>Vehicle Type</label>
               </div>
-              <div class="input-field col s7">
+              <div class="input-field col s6">
                 <select>
                   <option value="" disabled selected>Select Brand</option>
                   <option value="1">Toyota</option>
@@ -271,15 +267,87 @@
                 </select>
                 <label>Vehicle Brand</label>
               </div>
-              <div class="input-field col s12">
+              <div class="input-field col s6">
                   <input placeholder="E.g Camry 2006" id="disabled" type="text" class="validate">
                   <label for="disabled">Car Model and Year</label>
               </div>
-              <div class="input-field col s12">
+              <div class="input-field col s6">
                   <input placeholder="E.g ABJ-10053-JL2" id="disabled" type="text" class="validate">
                   <label for="disabled">Plate Number</label>
               </div>
               
+            </div>
+            <div class="row show-out-right" id="4">
+                <h5>Ride Details - 4</h5>
+                <div class="input-field col s6">
+                  <select>
+                    <option value="" disabled selected>Seats Offered</option>
+                    <option value="1">1 </option>
+                    <option value="2">2 </option>
+                    <option value="3">3 </option>
+                    <option value="3">4 </option>
+                    <option value="3">5 </option>
+                    <option value="3">6 </option>
+                  </select>
+                  <label>Number of Seats</label>
+              </div>
+              <div class="input-field inline col s6">
+                
+                  <input placeholder="2000" id="disabled" type="text" class="validate">
+                  <label for="disabled">Price per Seat in &#8358;</label>
+              </div>
+                <div class="col s12">
+                  <p>Onboard Amenities</p>
+                  
+                </div>
+              <div class="input-field col s6" style="text-align: left !important;">
+                  <p>
+                      <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>Air Conditioner</span>
+                      </label>
+                  </p>
+                  <p>
+                      <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>Child Onboard</span>
+                      </label>
+                  </p>
+                  <p>
+                      <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>2 per Row</span>
+                      </label>
+                  </p>
+                 
+              </div>
+              <div class="input-field col s6" style="text-align: left !important;">
+                  <p>
+                      <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>Onboard Movie</span>
+                      </label>
+                  </p>
+                  <p>
+                      <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>Radio</span>
+                      </label>
+                  </p>
+
+                  <p>
+                      <label>
+                        <input type="checkbox" class="filled-in" checked="checked" />
+                        <span>Child Allowed</span>
+                      </label>
+                  </p>
+              </div>
+              
+              
+            </div>
+            <div class="row show-out-right" id="5">
+              <h4>Thank you for Offering a Ride</h4>
+              <a href="" class="btn waves-effect">View Ride Details</a>
             </div>
           </div>
           <div class="ride-details">
