@@ -93,7 +93,7 @@
       </div>
       <div id="ride-menu">
         <div id="add-ride-form">
-          <h1>Offer a ride on your next journey</h1>
+          <h3>Offer a ride</h3>
           <div class="add-ride-progress"></div>
           <!-- <div class="ride-details">
             <div class="ride-destination">
@@ -158,6 +158,7 @@
           </div> -->
           <div id="add-ride-space" style="overflow: hidden; position: relative;">
             <div class="row" id="1">
+              <h5>Ride Details - 1</h5>
               <div class="input-field col s5">
                 <select>
                   <option value="" disabled selected>Select State</option>
@@ -207,112 +208,84 @@
               </div>
             </div>
             <div class="row show-out-right" id="2">
+                <h5>Ride Details - 2</h5>
+                <div class="input-field col s12">
+                    <input placeholder="Take-off address" id="disabled" type="text" class="validate">
+                    <label for="disabled">Start Address</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder="Destination address" id="disabled" type="text" class="validate">
+                    <label for="disabled">End Address</label>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="textarea1" placeholder="Describe the Journey. i.e. Routes you will be taking or stops along the way etc" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Ride Description</label>
+                </div>
+              </div>
+                
+              
+            <div class="row show-out-right" id="3">
+                <h5>Ride Details - 3</h5>
+                <div class="col s12"> 
                 <p>
                     <label>
                       <input name="group1" type="radio" class="with-gap" checked />
-                      <span>Select a Registered Vehicle</span>
+                      <span>Select a Previously Registered Vehicle</span>
                     </label>
                   </p>
+                </div>
+                <div class="input-field col s12">
+                    <select>
+                      <option value="" disabled selected>Select Vehicle</option>
+                      <option value="1" disabled>You have not registerest any Vehicles</option>
+                    </select>
+                    <label>Select A Vehicle</label>
+                  </div>
+                <div class="col s12">
                   <p>
                     <label>
                       <input name="group1" type="radio" class="with-gap" />
-                      <span>Use a New Vehicle</span>
+                      <span>Use and Register a New Vehicle</span>
                     </label>
                   </p>
+                </div>
               <div class="input-field col s5">
                 <select>
-                  <option value="" disabled selected>Select State</option>
-                  <option value="1">Lagos</option>
-                  <option value="2">Abuja</option>
-                  <option value="3">Delta</option>
+                  <option value="" disabled selected>Select Type</option>
+                  <option value="1">SUV</option>
+                  <option value="2">Coupe</option>
+                  <option value="3">Sedan</option>
+                  <option value="3">Bus</option>
+                  <option value="3">Jeep</option>
+                  <option value="3">Saloon</option>
                 </select>
-                <label>Select Vehicle</label>
+                <label>Vehicle Type</label>
               </div>
               <div class="input-field col s7">
                 <select>
-                  <option value="" disabled selected>Select LGA</option>
-                  <option value="1">Galadimawa LGA</option>
-                  <option value="2">Birnin Kebbi</option>
-                  <option value="3">Port-Harcourt</option>
+                  <option value="" disabled selected>Select Brand</option>
+                  <option value="1">Toyota</option>
+                  <option value="2">Honda</option>
+                  <option value="3">Ford</option>
+                  <option value="4">Peaugout</option>
                 </select>
+                <label>Vehicle Brand</label>
               </div>
               <div class="input-field col s12">
-                <div>
-                  <label for="description">Ride &amp; Description</label>
-                  <textarea type="text" name="" id="description"></textarea>
-                </div>
-                <div>
-                  <label for="priceOffered">Ride &amp; priceOffered</label>
-                  <textarea type="text" name="" id="priceOffered"></textarea>
-                </div>
+                  <input placeholder="E.g Camry 2006" id="disabled" type="text" class="validate">
+                  <label for="disabled">Car Model and Year</label>
               </div>
-              <div class="input-field col s6">
-                <input type="text" class="datepicker" id="date" /><label
-                  for="date"
-                  >Pick a Date <i class="material-icons right">event</i>
-                </label>
+              <div class="input-field col s12">
+                  <input placeholder="E.g ABJ-10053-JL2" id="disabled" type="text" class="validate">
+                  <label for="disabled">Plate Number</label>
               </div>
-              <div class="input-field col s6">
-                <input type="text" class="timepicker" id="time" /><label
-                  for="time"
-                  >Pick a Time <i class="material-icons right">schedule</i>
-                </label>
-              </div>
-            </div>
-            <div class="row show-out-right" id="3">
-              <div class="input-field col s5">
-                <select>
-                  <option value="" disabled selected>Select State</option>
-                  <option value="1">Lagos</option>
-                  <option value="2">Abuja</option>
-                  <option value="3">Delta</option>
-                </select>
-                <label>From Where</label>
-              </div>
-              <div class="input-field col s7">
-                <select>
-                  <option value="" disabled selected>Select LGA</option>
-                  <option value="1">Galadimawa LGA</option>
-                  <option value="2">Birnin Kebbi</option>
-                  <option value="3">Port-Harcourt</option>
-                </select>
-              </div>
-              <div class="input-field col s5">
-                <select>
-                  <option value="" disabled selected>Select State</option>
-                  <option value="1">Lagos</option>
-                  <option value="2">Abuja</option>
-                  <option value="3">Delta</option>
-                </select>
-                <label>To Where</label>
-              </div>
-              <div class="input-field col s7">
-                <select>
-                  <option value="" disabled selected>Select LGA</option>
-                  <option value="1">Gudu LGA</option>
-                  <option value="2">Ugbowo LGA</option>
-                  <option value="3">Ijero LGA</option>
-                  <option value="4">Ethiope East</option>
-                </select>
-              </div>
-              <div class="input-field col s6">
-                <input type="text" class="datepicker" id="date" /><label
-                  for="date"
-                  >Pick a Date <i class="material-icons right">event</i>
-                </label>
-              </div>
-              <div class="input-field col s6">
-                <input type="text" class="timepicker" id="time" /><label
-                  for="time"
-                  >Pick a Time <i class="material-icons right">schedule</i>
-                </label>
-              </div>
+              
             </div>
           </div>
           <div class="ride-details">
             <a href="" id="ride-back" class="waves-effect btn" data-to="0"
               ><i class="fa fa-arrow-left"></i> Back</a
-            ><a href="" id="ride-next" class="waves-effect btn" data-to="5"
+            ><a href="" id="ride-next" class="waves-effect btn" data-to="1"
               >Next <i class="fa fa-arrow-right"></i
             ></a>
           </div>
