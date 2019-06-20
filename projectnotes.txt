@@ -164,8 +164,8 @@ List of Tables
 
     User Table
 	- user id
-	- First Name
-	- Last Name
+	- First Name - 
+	- Last Name - 
 	- email
 	- password
 	- Phone Number (verify)
