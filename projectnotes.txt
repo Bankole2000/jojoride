@@ -180,7 +180,10 @@ List of Tables
 	- Account Number
 	- outstanding / credit
 	- suspended
+	- suspension reason
+	- suspension date
 	- logged in
+	- last login date
 	
 
 
