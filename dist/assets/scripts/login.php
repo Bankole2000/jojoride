@@ -3,6 +3,7 @@
 // TODO: Check if Email is registered on blur event
 // TODO: Auto Login
 // TODO: Check if User is logged in 
+// FIXME: 
 
 session_start();
 
@@ -13,7 +14,7 @@ session_start();
     // Check if the email is registered
     if($_POST["action"] == "checkEmail")
     {
-
+      
     }
 
     // AutoLogin on load if Logged in Before (without Logging out)
