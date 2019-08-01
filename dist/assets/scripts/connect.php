@@ -8,14 +8,14 @@
 
 // Variables for Local connection
 $host = "localhost";
-$dbname = "carpool";
-$dbuser = "gw";
-$password = "Bankole1.";
+$dbname = "jojoride";
+$dbuser = "root";
+$password = "";
 
 //order: localhost user password db_name
 //use @ to block error report
 //connect_error: null
-$db = new mysqli($host,$dbuser,$password,$dbuser); 
+$db = new mysqli($host,$dbuser,$password,$dbname); 
 if($db->connect_error){
     exit("cannot connect to database");
     }
