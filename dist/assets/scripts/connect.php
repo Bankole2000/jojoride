@@ -16,10 +16,11 @@ $password = "";
 //use @ to block error report
 //connect_error: null
 $db = new mysqli($host,$dbuser,$password,$dbname); 
-if($db->connect_error){
-    exit("cannot connect to database");
-    }
-var_dump($db->connect_error); 
+
+// if($db->connect_error){
+//     exit("cannot connect to database");
+//     }
+// var_dump($db->connect_error); 
 
 //close the connection
 //  if($db->close()){

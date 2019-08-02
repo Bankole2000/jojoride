@@ -1,9 +1,9 @@
-window.alert("Login JS is working");
+// window.alert("Login JS is working");
 
-const validate = () => {
+// const validate = () => {
   
-}
+// }
 
-const signIn = (userName, password) => {
+// const signIn = (userName, password) => {
 
-}
+// }

@@ -52,16 +52,16 @@
       <div id="login-menu">
         <div id="login-form">
           <h3>Sign In</h3>
-          <form action="" id="real_login_form">
+          <form action="" id="">
             <div class="input-field">
-              <input type="email" class="text-input valid" id="email" />
-              <label for="email">Email</label>
-              <span
+              <input type="email" class="text-input" data-intent="login" id="login-email" placeholder="yourBestEmail@example.com" />
+              <label for="login-email">Email <span class="connection" id="connection-login-email"></span></label>
+              <!-- <span
                 class="helper-text"
-                data-error="Email invalid / not registered"
-                data-success=""
-                >Please Enter a registered email address</span
-              >
+                data-error="Email invalid / Not registered"
+                data-success="Email Okay"
+                ></span
+              > -->
             </div>
             <div class="input-field">
               <label for="password"
@@ -72,7 +72,7 @@
                   data-success="right"
                 ></span
               ></label>
-              <input type="password" class="text-input valid" id="password" />
+              <input type="password" class="text-input valid" id="login-password" placeholder="" />
             </div>
             <a href="users/dashboard.html" type="submit" class="btn btn-primary">Sign In</a>
           </form>
@@ -96,16 +96,16 @@
               <div class="row" id="s1">
                 <h5>Signup - 1</h5>
                 <div class="input-field col s6">
-                    <input placeholder="John" id="disabled5" type="text" class="validate">
-                    <label for="disabled5">First Name</label>
+                    <input placeholder="e.g. John" id="first-name" type="text" class="text-input name ">
+                    <label for="first-name">First Name <span id="connection-first-name"></span></label>
                 </div>
                 <div class="input-field col s6">
-                    <input placeholder="Smith" id="disabled6" type="text" class="validate">
-                    <label for="disabled6">Last Name</label>
+                    <input placeholder="e.g. Smith" id="last-name" type="text" class="text-input name">
+                    <label for="last-name">Last Name <span id="connection-last-name"></span></label>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder="johnsmith@example.com" id="disabled6" type="email" class="validate">
-                    <label for="disabled6">Email</label>
+                    <input placeholder="yourBestEmail@example.com" data-intent="signup" id="signup-email" type="email" class="text-input">
+                    <label for="signup-email">Email <span class="connection" id="connection-signup-email"></span></label>
                 </div>
                 <div class="input-field col s5">
                   <select>
@@ -116,8 +116,8 @@
                   <label>Select Gender</label>
                 </div>
                 <div class="input-field col s7">
-                  <input type="text" class="datepicker" id="date" /><label
-                    for="date"
+                  <input type="date" id="birthdate" /><label
+                    for="birthdate"
                     >BirthDate <i class="material-icons right">event</i>
                   </label>
                 </div>
@@ -651,6 +651,7 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/login.js"></script>
     <script src="assets/js/validate.js"></script>
+    <script src="assets/js/user.js"></script>
     <script>
       $(window).on("load", function() {
         $(".loader").fadeOut("slow");
@@ -660,9 +661,7 @@
       });
 
       
-    let name_reg=/^[a-z]{3,}$/i;
-    let email_reg=/^[a-z]+(_|\.)?[a-z0-9]*@[a-z]+\.[a-z]{2,}$/i;
-    let password_reg=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/i;
+    
    
     </script>
   </body>

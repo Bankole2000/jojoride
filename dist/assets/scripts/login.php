@@ -14,7 +14,14 @@ session_start();
     // Check if the email is registered
     if($_POST["action"] == "checkEmail")
     {
-      
+      $email=$_POST['email'];
+        $sql= "SELECT 1 FROM users WHERE email = '{$_POST['email']}'";
+        $result = $db->query($sql);
+        if($result->num_rows === 1){
+            exit('is registered');
+        }else{
+            exit('is not registered');
+        }
     }
 
     // AutoLogin on load if Logged in Before (without Logging out)
