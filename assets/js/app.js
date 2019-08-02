@@ -1,4 +1,9 @@
 //Initializations
+document.addEventListener("click", function(e){
+  e.preventDefault();
+  if(e.target.classList.contains("footer-link")){
+    test(e.target.textContent);
+  }});
 
 
 // GET UI Elements
