@@ -2,8 +2,9 @@
 // TODO: Validation - Check field on blur
 // TODO: Authenticate email on blur
 // TODO: Check if Logged in
-const timeout = 5000;
-
+const timeout = 2000;
+const loader = "<i class='fas fa-spinner fa-pulse'></i>";
+const connectionError = "Unable to connect <i class='fas fa-broadcast-tower'></i>";
 const test = (arg) => {
   window.alert(`you passed this ${arg}`);
 };
@@ -12,7 +13,7 @@ const checkIfRegistered = (target) => {
   let email = target.value;
   let intent = target.getAttribute('data-intent');
   let action = "checkEmail";
-  $(`span[id=connection-${target.id}]`).html('Checking <i class="fas fa-spinner fa-spin"><i>')
+  $(`span[id=connection-${target.id}]`).html(`Checking ${loader}`);
   $.ajax({
     url: "assets/scripts/login.php",
             method: "POST",
@@ -39,12 +40,10 @@ const checkIfRegistered = (target) => {
             },
             dataType: "text",
             error: function(){
-                alert("Connection Error");
+              //  alert("Connection Error");
+              $(`span[id=connection-${target.id}]`).html(`${connectionError}`);
             },
             timeout: timeout
   })
 }
 
-const connectionError = (field) => {
-  document.getElementById(`connection-${field}`);
-}

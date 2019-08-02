@@ -52,14 +52,12 @@ const checkName = ({target}) => {
   return isValid; 
 }
 
-// const loginEmail = ;
-// const signupEmail = ;
-// const firstName = ;
-// const lastName = ;
+const enableButton = (target, isValid) => {
+  target.toggleClass('disabled', isValid);
+}
+
 document.querySelector('#first-name').addEventListener('blur', checkName);
 document.querySelector('#last-name').addEventListener('blur', checkName);
-
-
 document.querySelector('#login-email').addEventListener('blur', checkEmail);
 document.querySelector('#signup-email').addEventListener('blur', checkEmail);
 $(document).on('focusin',`#login-email`,function(){unmark(this)});

@@ -37,15 +37,15 @@ a {
   &:hover {
     color: darken($primary-color, 15);
     @include ease-out();
-  }
+  }   
 
-  &.btn, &.btn-large {
-    display: inline-block;
+  // &.btn, &.btn-large {
+  //   display: inline-block;
 
-    &:hover {
-      color: #fff !important;
-    }
-  }
+  //   &:hover {
+  //     color: #fff !important;
+  //   }
+  // }
 }
 
 li {
@@ -98,11 +98,11 @@ li {
 }
 
 // Buttons
-  .btn, .btn-large {
+  // .btn, .btn-large {
   
-    border-radius: 50px;
+  //   border-radius: 50px;
     
-  }
+  // }
 
 // .btn {
 //   padding: 1rem 2rem;

@@ -12,16 +12,9 @@ a {
   a:hover {
     color: #0078a9;
     transition: all 0.3s ease-out; }
-  a.btn, a.btn-large {
-    display: inline-block; }
-    a.btn:hover, a.btn-large:hover {
-      color: #fff !important; }
 
 li {
   list-style-type: none; }
-
-.btn, .btn-large {
-  border-radius: 50px; }
 
 #login-menu {
   display: flex;
@@ -53,8 +46,6 @@ li {
     display: none; }
     #login-menu #signup-form.show {
       display: block; }
-  #login-menu .btn {
-    width: 100%; }
   #login-menu .or {
     display: flex;
     flex-direction: row;
