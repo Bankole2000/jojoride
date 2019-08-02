@@ -2,8 +2,9 @@
 // TODO: Validation - Check field on blur
 // TODO: Authenticate email on blur
 // TODO: Check if Logged in
-const timeout = 2000;
+const timeout = 1000;
 const loader = "<i class='fas fa-spinner fa-pulse'></i>";
+
 const connectionError = "Unable to connect <i class='fas fa-broadcast-tower'></i>";
 const test = (arg) => {
   window.alert(`you passed this ${arg}`);
@@ -23,27 +24,48 @@ const checkIfRegistered = (target) => {
              },
             success: function(response){
                 if(response == "is registered"){
-                 
-                // If intent == Login set login field as valid, else if intent == Signup set signup field as invalid
                   isdbValid = intent === "login" ? true : false ;
                   isdbValid ? $(`#connection-${target.id}`).html("is OK") : $(`#connection-${target.id}`).html("is already registered"); 
-
                 }else if(response == "is not registered"){
-                 
-                // If intent == Login set login field as valid, else if intent == Signup set signup field as invalid
                   isdbValid = intent === "signup" ? true : false ;
                   isdbValid? $(`#connection-${target.id}`).html("is OK") : $(`#connection-${target.id}`).html("is not registered - Sign up?"); 
-
                 }
                 flagIfInvalid(target, isdbValid);
-                console.log(response)
             },
             dataType: "text",
             error: function(){
-              //  alert("Connection Error");
               $(`span[id=connection-${target.id}]`).html(`${connectionError}`);
             },
             timeout: timeout
   })
-}
+};
+
+const loginUser = (email, password) => {
+  let action = "newLogin";
+  $.ajax({
+    url: "assets/scripts/login.php",
+            method: "POST",
+            data: {
+            action: action,
+            email: email,
+            password: password
+             },
+            success: function(response){
+                if(response == "success"){
+                //  isdbValid ? $(`#connection-${target.id}`).html("is OK") : $(`#connection-${target.id}`).html("is already registered"); 
+                M.toast({html: 'Login Successful'});
+                }else if(response == "failed"){
+                M.toast({html: 'Wrong Email / Password'});
+                enableButton('login-btn', true);
+                $('#login-btn').html('Sign in').css({'color': 'white'});
+                //  isdbValid? $(`#connection-${target.id}`).html("is OK") : $(`#connection-${target.id}`).html("is not registered - Sign up?"); 
+                }
+            },
+            dataType: "text",
+            error: function(){
+            //  $(`span[id=connection-${target.id}]`).html(`${connectionError}`);
+            },
+            timeout: timeout
+  })
+};
 

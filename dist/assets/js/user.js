@@ -1,11 +1,12 @@
 // TODO: Check if logged in
 // TODO: Get User Data
 // TODO: Set UI 
-// let email_reg=/^[a-z]+(_|\.)?[a-z0-9]*@[a-z]+\.[a-z]{2,}$/i;
 
-let name_reg=/^[a-z]{3,}$/i;
-let email_reg=/^[a-z]+(_|\.)?[a-z0-9]*@[a-z]+\.[a-z]{2,}$/i;
-let password_reg=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/i;
+const name_reg=/^[a-z]{3,}$/i;
+const email_reg=/^[a-z]+(_|\.)?[a-z0-9]*@[a-z]+\.[a-z]{2,}$/i;
+const password_reg= new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[.!@#\$%\^&\*])(?=.{8,})");
+const date_reg = /^(\d{1,2})-(\d{1,2})-(\d{4})$/;
+const whiteLoader = "<i class='fas fa-spinner fa-pulse'></i>";
 
 const markAsValid = (field) => {
   field.classList.add("valid");
@@ -52,17 +53,42 @@ const checkName = ({target}) => {
   return isValid; 
 }
 
-const enableButton = (target, isValid) => {
-  target.toggleClass('disabled', isValid);
+const checkAge = (target) => {
+  const value = new Date(target.value);
+  const ageinSec = today - value;
+  isValid = ageinSec > 0 ? true: false;
+  let noOfYears = Math.floor(ageinSec / (365 * 24 * 60 * 60 * 1000));
+  isofAge = noOfYears >= 18 && noOfYears < 120 ? true : false;
+  flagIfInvalid(target, isofAge); 
+  console.log(isofAge + " " + ageinSec + " " + typeof(ageinSec) + " " + noOfYears +"years old");
+  isofAge ? $(`span[id=connection-${target.id}]`).html("is Ok") : $(`span[id=connection-${target.id}]`).html("must be > 18"); 
+  return isofAge;
 }
 
-document.querySelector('#first-name').addEventListener('blur', checkName);
+const enableButton = (targetId, isValid) => {
+  $(`#${targetId}`).toggleClass('disabled', !isValid);
+  console.log(targetId);
+}
+
+document.querySelector('#first-name').addEventListener('blur', checkName);", , "
 document.querySelector('#last-name').addEventListener('blur', checkName);
 document.querySelector('#login-email').addEventListener('blur', checkEmail);
 document.querySelector('#signup-email').addEventListener('blur', checkEmail);
 $(document).on('focusin',`#login-email`,function(){unmark(this)});
 $(document).on('focusin',`#signup-email`,function(){unmark(this)});
 $(document).on('focusin', '.name', function(){unmark(this)});
+$(document).on('keyup', '#birthdate', function(){checkAge(this)});
+$("#login-email, #login-password").on('keyup', function(){
+  const email = $('#login-email').val();
+  const password = $('#login-password').val();
+  isValid = email_reg.test(email) && password_reg.test(password) ? true : false;
+  console.log(`${isValid} ${email} ${password}`);
+  enableButton('login-btn', isValid);
+})
+$('#login-btn').click(()=>{
+  $('#login-btn').html(`Signing In ${whiteLoader}`).addClass('disabled');
+  loginUser($('#login-email').val(), $('#login-password').val());
+})
 
 
 

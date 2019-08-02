@@ -61,7 +61,7 @@
               <label for="password">Password <span></span></label>
               <input type="password" class="text-input" id="login-password" placeholder="" />
             </div>
-            <a href="users/dashboard.html" class="btn waves-effect waves-light disabled">Sign In</a>
+            <a href="users/dashboard.html" class="btn waves-effect waves-light disabled" id="login-btn">Sign In</a>
           </form>
           <div class="gap"></div>
           <div class="or">
@@ -97,8 +97,8 @@
                 <div class="input-field col s5">
                   <select>
                     <option value="" disabled selected>Select Gender</option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                   </select>
                   <label>Select Gender</label>
                 </div>
@@ -106,7 +106,7 @@
                   <input type="date" id="birthdate" /><label
                     for="birthdate"
                     >BirthDate <i class="material-icons right">event</i>
-                  </label>
+                  <span class="connection" id="connection-birthdate"></span></label>
                 </div>
                 
               </div>
