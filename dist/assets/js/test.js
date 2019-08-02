@@ -63,7 +63,9 @@ const loginUser = (email, password) => {
             },
             dataType: "text",
             error: function(){
-            //  $(`span[id=connection-${target.id}]`).html(`${connectionError}`);
+              M.toast({html: 'Connection Error'});
+              enableButton('login-btn', true);
+              $('#login-btn').html('Sign in').css({'color': 'white'});
             },
             timeout: timeout
   })
