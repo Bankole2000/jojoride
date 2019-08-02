@@ -32,8 +32,16 @@ session_start();
 
     // Login Normally (Through Login Form)
     if($_POST["action"] == "newLogin")
-    {
-
+    { 
+      $email=$_POST['email'];
+      $password = $_POST['password'];
+        $sql= "SELECT 1 FROM users WHERE email = '{$_POST['email']}' AND password = '{$_POST['email']}'";
+        $result = $db->query($sql);
+        if($result->num_rows === 1){
+            exit('success');
+        }else{
+            exit('failed');
+        }
     }
 
     
