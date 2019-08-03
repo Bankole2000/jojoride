@@ -10,7 +10,7 @@ session_start();
   if(isset($_POST["action"]))
   {
     require_once('connect.php');
-
+    
     // Check if the email is registered
     if($_POST["action"] == "checkEmail")
     {
@@ -35,7 +35,7 @@ session_start();
     { 
       $email=$_POST['email'];
       $password = $_POST['password'];
-        $sql= "SELECT 1 FROM users WHERE email = '{$_POST['email']}' AND password = '{$_POST['email']}'";
+        $sql= "SELECT 1 FROM users WHERE email = '{$_POST['email']}' AND password = '{$_POST['password']}'";
         $result = $db->query($sql);
         if($result->num_rows === 1){
             exit('success');
