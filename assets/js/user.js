@@ -6,7 +6,7 @@ const name_reg=/^[a-z]{3,}$/i;
 const email_reg=/^[a-z]+(_|\.)?[a-z0-9]*@[a-z]+\.[a-z]{2,}$/i;
 const password_reg= new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[.!@#\$%\^&\*])(?=.{8,})");
 const date_reg = /^(\d{1,2})-(\d{1,2})-(\d{4})$/;
-const whiteLoader = "<i class='fas fa-spinner fa-pulse'></i>";
+const loader = "<i class='fas fa-spinner fa-pulse'></i>";
 
 const markAsValid = (field) => {
   field.classList.add("valid");
@@ -86,7 +86,7 @@ $("#login-email, #login-password").on('keyup', function(){
   enableButton('login-btn', isValid);
 })
 $('#login-btn').click(()=>{
-  $('#login-btn').html(`Signing In ${whiteLoader}`).addClass('disabled');
+  $('#login-btn').html(`Signing In ${loader}`).addClass('disabled');
   loginUser($('#login-email').val(), $('#login-password').val());
 })
 

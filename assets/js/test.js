@@ -3,8 +3,10 @@
 // TODO: Authenticate email on blur
 // TODO: Check if Logged in
 const timeout = 1000;
-const loader = "<i class='fas fa-spinner fa-pulse'></i>";
-
+// const loader = "<i class='fas fa-spinner fa-pulse'></i>";
+const successIcon = '<i class="material-icons" style="color: green;">check_circle</i>';
+const failIcon = '<i class="material-icons" style="color: red;">cancel</i>'
+const connectionErrorIcon = '<i class="material-icons" style="color: white; font-size: inherit;">signal_wifi_off</i>'
 const connectionError = "Unable to connect <i class='fas fa-broadcast-tower'></i>";
 const test = (arg) => {
   window.alert(`you passed this ${arg}`);
@@ -51,21 +53,22 @@ const loginUser = (email, password) => {
             password: password
              },
             success: function(response){
-                if(response == "success"){
-                //  isdbValid ? $(`#connection-${target.id}`).html("is OK") : $(`#connection-${target.id}`).html("is already registered"); 
-                M.toast({html: 'Login Successful'});
-                }else if(response == "failed"){
-                M.toast({html: 'Wrong Email / Password'});
+                if(response === "success"){
+                  $('#login-btn').html(`Signed In ${successIcon}`).css({'color': 'white'});
+                M.toast({html: `Login Successful &nbsp; ${successIcon}`, classes: "success", completeCallback: function(){alert('Your toast was dismissed')}, displayLength: 1000 });
+                }else if(response === "failed"){
+                
+                M.toast({html: `Wrong Email / Password ${failIcon}`});
                 enableButton('login-btn', true);
-                $('#login-btn').html('Sign in').css({'color': 'white'});
-                //  isdbValid? $(`#connection-${target.id}`).html("is OK") : $(`#connection-${target.id}`).html("is not registered - Sign up?"); 
+                $('#login-btn').html('Sign in <i class="fas fa-sign-in-alt"></i>').css({'color': 'white'});
+                
                 }
             },
             dataType: "text",
             error: function(){
-              M.toast({html: 'Connection Error'});
+              M.toast({html: `Connection Error &nbsp; ${connectionErrorIcon}`});
               enableButton('login-btn', true);
-              $('#login-btn').html('Sign in').css({'color': 'white'});
+              $('#login-btn').html('Sign in <i class="fas fa-sign-in-alt"></i>').css({'color': 'white'});
             },
             timeout: timeout
   })
