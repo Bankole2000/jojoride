@@ -16,6 +16,9 @@ a {
 .success {
   background-color: #009ddc; }
 
+.error {
+  background-color: #e60000; }
+
 li {
   list-style-type: none; }
 

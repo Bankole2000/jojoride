@@ -52,6 +52,10 @@ a {
   background-color: darken($primary-color, 5);
 }
 
+.error {
+  background-color: darken(red, 5); 
+}
+
 li {
   list-style-type: none;
 }
