@@ -36,8 +36,12 @@ session_start();
       $email=$_POST['email'];
       $password = $_POST['password'];
         $sql= "SELECT 1 FROM users WHERE email = '{$_POST['email']}' AND password = '{$_POST['password']}'";
+        $sql2 = "UPDATE users SET loggedIn = '{$_POST['firstname1']}', last_login_date = NOW() WHERE email = '{$_POST['email']}'";
         $result = $db->query($sql);
         if($result->num_rows === 1){
+          $db->query($sql2);
+            // SET SESSION Details
+            // UPDATE 
             exit('success');
         }else{
             exit('failed');

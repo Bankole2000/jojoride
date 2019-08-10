@@ -55,7 +55,9 @@ const loginUser = (email, password) => {
             success: function(response){
                 if(response === "success"){
                   $('#login-btn').html(`Signed In ${successIcon}`).css({'color': 'white'});
-                M.toast({html: `Login Successful &nbsp; ${successIcon}`, classes: "success", completeCallback: function(){alert('Your toast was dismissed')}, displayLength: 1000 });
+                  localStorage.setItem("jojoemail", email);
+                  localStorage.setItem("jojopass", password);
+                M.toast({html: `Login Successful &nbsp; ${successIcon}`, classes: "success", completeCallback: () => { window.location.replace("./users/dashboard.html"); }, displayLength: 1000 });
                 }else if(response === "failed"){
                 
                 M.toast({html: `Wrong Email / Password ${failIcon}`});
@@ -73,4 +75,12 @@ const loginUser = (email, password) => {
             timeout: timeout
   })
 };
+
+const autoLogin = () => {
+  let email = localStorage.getItem("jojoemail");
+  let pass = localStorage.getItem("jojopass");
+  email && pass ? loginUser(email, pass) : false ;
+};
+
+autoLogin();
 
