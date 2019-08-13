@@ -27,12 +27,15 @@ const checkIfRegistered = (target) => {
             success: function(response){
                 if(response == "is registered"){
                   isdbValid = intent === "login" ? true : false ;
+                  localStorage.setItem("jojoisdbvalid", isdbValid);
                   isdbValid ? $(`#connection-${target.id}`).html("is OK") : $(`#connection-${target.id}`).html("is already registered"); 
                 }else if(response == "is not registered"){
                   isdbValid = intent === "signup" ? true : false ;
+                  localStorage.setItem("jojoisdbvalid", isdbValid);
                   isdbValid? $(`#connection-${target.id}`).html("is OK") : $(`#connection-${target.id}`).html("is not registered - Sign up?"); 
                 }
                 flagIfInvalid(target, isdbValid);
+                return isdbValid;
             },
             dataType: "text",
             error: function(){
@@ -40,6 +43,7 @@ const checkIfRegistered = (target) => {
             },
             timeout: timeout
   })
+  
 };
 
 const loginUser = (email, pass) => {

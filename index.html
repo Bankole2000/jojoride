@@ -84,19 +84,19 @@
                 <h5>Signup - 1</h5>
                 <form action="" id="">
                 <div class="input-field col s6">
-                    <input placeholder="e.g. John" id="first-name" type="text" class="text-input name ">
+                    <input placeholder="e.g. John" id="first-name" type="text" data-type="name" class="text-input name ">
                     <label for="first-name">First Name <span id="connection-first-name"></span></label>
                 </div>
                 <div class="input-field col s6">
-                    <input placeholder="e.g. Smith" id="last-name" type="text" class="text-input name">
+                    <input placeholder="e.g. Smith" id="last-name" type="text" data-type="name" class="text-input name">
                     <label for="last-name">Last Name <span id="connection-last-name"></span></label>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder="yourBestEmail@example.com" data-intent="signup" id="signup-email" type="email" class="text-input">
+                    <input placeholder="yourBestEmail@example.com" data-intent="signup" data-type="email" id="signup-email" type="email" class="text-input">
                     <label for="signup-email">Email <span class="connection" id="connection-signup-email"></span></label>
                 </div>
                 <div class="input-field col s5">
-                  <select>
+                  <select id="gender">
                     <option value="" disabled selected>Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -104,7 +104,7 @@
                   <label>Select Gender</label>
                 </div>
                 <div class="input-field col s7">
-                  <input type="text" id="birthdate" placeholder="mm/dd/yy" /><label
+                  <input type="text" data-type="date" id="birthdate" placeholder="mm/dd/yy" /><label
                     for="birthdate"
                     >BirthDate <i class="material-icons right">event</i>
                   <span class="connection" id="connection-birthdate"></span></label>
@@ -112,28 +112,40 @@
                 </form>
                 
               </div>
-              <div class="row" id="s2">
+              <div class="row sup" id="s2">
                   <h5>Signup - 2</h5>
                   <div class="input-field col s12 m6">
-                      <input placeholder="e.g. johncool59" id="disabled" type="text" class="">
-                      <label for="disabled">UserName</label>
+                      <input placeholder="e.g. johncool59" id="username" type="text" class="">
+                      <label for="username">UserName</label>
                   </div>
                   <div class="input-field col s12">
-                      <input placeholder="" id="pass" type="text" class="">
-                      <label for="disabled">Password</label>
+                      <input placeholder="Choose a Password" id="pass1" type="text" class="">
+                      <label for="pass1">Password</label>
                   </div>
                   <div class="input-field col s12">
-                      <input placeholder="" id="confpass" type="text" class="">
-                      <label for="disabled">Password</label>
+                      <input placeholder="Confirm your Chosen Password" id="pass2" type="text" class="">
+                      <label for="pass2">Password</label>
+                  </div>
+                  
+                </div>
+                <div class="row sup" id="s2">
+                  <h5>Signup - 3</h5>
+                  <div class="input-field col s12 m6">
+                      <h6>You're almost there</h6>
+                      <p>A <strong>Verification Code</strong> has been sent <br>to your Email. Please enter the code and <br>click Verify to complete the Signup process</p>
+                  </div>
+                  <div class="input-field col s12">
+                      <input placeholder="0000" id="pass" type="text" class="">
+                      <label for="disabled">Verification Code</label>
                   </div>
                   
                 </div>
              </div>
             <div class="signup-details">
-              <a href="" id="signup-next" class="waves-effect btn" style="float:right;" data-to="1"
+              <a href="" id="signup-next" class="waves-effect btn disabled movesup" style="float:right; margin-right: 15px;" data="1"
                 >Next <i class="fa fa-arrow-right"></i
               ></a>
-              <a href="" id="signup-back" class="waves-effect btn" style="float:left;" data-to="1"
+              <a href="" id="signup-back" class="waves-effect btn disabled movesup" style="float:left; margin-left: 15px;" data="0"
                 ><i class="fa fa-arrow-left"></i
                   > Back </a>
             </div>
