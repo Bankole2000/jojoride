@@ -69,20 +69,20 @@
             <span>OR</span>
             <hr class="bar" />
           </div>
-          <a href="users/dashboard.html" class="btn red signup"
-            >Sign in with Google <i class="fab fa-google"></i>
+          <a href="users/dashboard.html" style="float: left;" class="btn red signup"
+            >Sign in <i class="fab fa-google"></i>
           </a>
-          <a href="users/dashboard.html" class="btn btn-flat signup"
-            >Create a New Account <i class="fa fa-user-plus"></i>
+          <a href="users/dashboard.html" style="float: right; width: 50%;" class="btn btn-flat signup"
+            >Signup <i class="fa fa-user-plus"></i>
           </a>
         </div>
         <div id="signup-form">
             <h3>Sign up</h3>
             <div class="signup-progress"></div>
            <div id="signup-space">
-              <div class="row" id="s1">
+              <div class="row sup" id="s1">
                 <h5>Signup - 1</h5>
-                <form action="">
+                <form action="" id="">
                 <div class="input-field col s6">
                     <input placeholder="e.g. John" id="first-name" type="text" class="text-input name ">
                     <label for="first-name">First Name <span id="connection-first-name"></span></label>
@@ -112,7 +112,7 @@
                 </form>
                 
               </div>
-              <!-- <div class="row show-out-right" id="s2">
+              <div class="row" id="s2">
                   <h5>Signup - 2</h5>
                   <div class="input-field col s12 m6">
                       <input placeholder="e.g. johncool59" id="disabled" type="text" class="">
@@ -127,12 +127,15 @@
                       <label for="disabled">Password</label>
                   </div>
                   
-                </div> -->
+                </div>
              </div>
             <div class="signup-details">
-              <a href="" id="signup-next" class="waves-effect btn" data-to="1"
+              <a href="" id="signup-next" class="waves-effect btn" style="float:right;" data-to="1"
                 >Next <i class="fa fa-arrow-right"></i
               ></a>
+              <a href="" id="signup-back" class="waves-effect btn" style="float:left;" data-to="1"
+                ><i class="fa fa-arrow-left"></i
+                  > Back </a>
             </div>
           </div>
       </div>
@@ -338,9 +341,9 @@
             </div>
           </div>
           <div class="ride-details">
-            <a href="" id="ride-back" class="waves-effect btn" data-to="0"
+            <a href="" id="ride-back" style="float:left; margin-left: 15px; width: 40%;" class="waves-effect btn" data-to="0"
               ><i class="fa fa-arrow-left"></i> Back</a
-            ><a href="" id="ride-next" class="waves-effect btn" data-to="1"
+            ><a href="" id="ride-next" style="float:right; margin-right: 15px; width: 40%;" class="waves-effect btn" data-to="1"
               >Next <i class="fa fa-arrow-right"></i
             ></a>
           </div>
@@ -400,7 +403,7 @@
               </div>
             </form>
             <a href="search.html">
-              <button class="btn">
+              <button class="btn" style="width: 60%;">
                 Find a Ride <i class="material-icons right">search</i>
               </button></a
             >
@@ -412,7 +415,7 @@
             <hr class="bar" />
           </div>
           <a href="search.html">
-            <button class="btn blue">
+            <button class="btn blue" style="width: 60%;">
               View All Rides <i class="material-icons right">local_taxi</i>
             </button></a
           >
