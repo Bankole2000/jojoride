@@ -39,13 +39,6 @@ a {
     @include ease-out();
   }   
 
-  // &.btn, &.btn-large {
-  //   display: inline-block;
-
-  //   &:hover {
-  //     color: #fff !important;
-  //   }
-  // }
 }
 
 .success {
@@ -104,35 +97,3 @@ li {
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str(rgba($top-color, $opacity1))}', endColorstr='#{ie-hex-str(rgba($bottom-color, $opacity2))}',GradientType=0 ); /* IE6-9 */
 }
-
-// Buttons
-  // .btn, .btn-large {
-  
-  //   border-radius: 50px;
-    
-  // }
-
-// .btn {
-//   padding: 1rem 2rem;
-//   border: 0;
-//   border-radius: 50px;
-//   color: $white;
-
-//   &.btn-primary {
-//     background-color: $primary-color;
-
-//     &:hover {
-//       background-color: darken($primary-color, 15);
-//       @include ease-out();
-//     }
-//   }
-//   &.btn-white {
-//     background-color: $white;
-//     color: $primary-color;
-//     border: 1px solid $grey;
-//     &:hover {
-//       background-color: $grey;
-//       color: $primary-color;
-//     }
-//   }
-// }
