@@ -55,14 +55,5 @@ $("#signup-next").click(function(e) {
 
 $("#signup-back").click(function(e) {
   e.preventDefault();
-  let number = e.target.getAttribute("data-to");
-  let prevState = parseInt(number, 10);
-  let currState = prevState + 1;
-  let nextBack = prevState - 1;
-  console.log(`${currState} ${prevState}`);
-  $(`#s${currState}`).addClass("show-out-right");
-  $(`#s${prevState}`).addClass("show-in");
-  $(`#s${prevState}`).removeClass("show-out-left");
-  e.target.setAttribute("data-to", nextBack);
-  $("#signup-next").attr("data-to", prevState);
+  
 });
