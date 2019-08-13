@@ -33,6 +33,9 @@
 
   #signup-form {
     display: none;
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
 
     &.show {
       display: block;

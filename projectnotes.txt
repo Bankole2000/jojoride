@@ -6,7 +6,13 @@ green: #5dd167;
 Paragraph font-size: 16px;
     line-height: 20px; 
 
-
+Free Hosting/Database Details
+URL : https://jojoride.000webhostapp.com
+database Details : {
+ dbname = id10472942_jojoride
+ dbuser = id10472942_bankole
+ dbhost = localhost
+}
 
 
 RIDE Details

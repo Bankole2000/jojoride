@@ -50,15 +50,7 @@ $("#ride-back").click(function(e) {
 
 $("#signup-next").click(function(e) {
   e.preventDefault();
-  let number = e.target.getAttribute("data-to");
-  let state = parseInt(number, 10);
-  let nextState = state + 1;
-  console.log(`${state} ${nextState}`);
-  $(`#s${state}`).addClass("show-out-left");
-  $(`#s${nextState}`).addClass("show-in");
-  $(`#s${nextState}`).removeClass("show-out-right");
-  e.target.setAttribute("data-to", nextState);
-  $("#signup-back").attr("data-to", state);
+  
 });
 
 $("#signup-back").click(function(e) {

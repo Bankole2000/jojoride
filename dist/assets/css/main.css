@@ -49,7 +49,10 @@ li {
     #login-menu #login-form.show {
       display: block; }
   #login-menu #signup-form {
-    display: none; }
+    display: none;
+    margin: auto;
+    max-width: 600px;
+    text-align: center; }
     #login-menu #signup-form.show {
       display: block; }
   #login-menu .btn {
