@@ -42,7 +42,7 @@ const checkIfRegistered = (target) => {
   })
 };
 
-const loginUser = (email, password) => {
+const loginUser = (email, pass) => {
   let action = "newLogin";
   $.ajax({
     url: "assets/scripts/login.php",
@@ -50,13 +50,17 @@ const loginUser = (email, password) => {
             data: {
             action: action,
             email: email,
-            password: password
+            pass: pass
              },
-            success: function(response){
-                if(response === "success"){
+            success: function(data){
+                console.log(data);
+                if(data.message === "success"){
                   $('#login-btn').html(`Signed In ${successIcon}`).css({'color': 'white'});
-                M.toast({html: `Login Successful &nbsp; ${successIcon}`, classes: "success", completeCallback: function(){alert('Your toast was dismissed')}, displayLength: 1000 });
-                }else if(response === "failed"){
+                  localStorage.setItem("jojoemail", data.email);
+                  localStorage.setItem("jojopass", data.pass);
+                  localStorage.setItem("jojoid", data.id);
+                M.toast({html: `Login Successful &nbsp; ${successIcon}`, classes: "success", completeCallback: () => { window.location.replace("./users/dashboard.html"); }, displayLength: 1000 });
+                }else if(data.message === "failed"){
                 
                 M.toast({html: `Wrong Email / Password ${failIcon}`});
                 enableButton('login-btn', true);
@@ -64,7 +68,7 @@ const loginUser = (email, password) => {
                 
                 }
             },
-            dataType: "text",
+            dataType: "JSON",
             error: function(){
               M.toast({html: `Connection Error &nbsp; ${connectionErrorIcon}`});
               enableButton('login-btn', true);
@@ -73,4 +77,12 @@ const loginUser = (email, password) => {
             timeout: timeout
   })
 };
+
+const autoLogin = () => {
+  let email = localStorage.getItem("jojoemail");
+  let pass = localStorage.getItem("jojopass");
+  email && pass ? loginUser(email, pass) : false ;
+};
+
+autoLogin();
 
