@@ -12,6 +12,39 @@ const test = (arg) => {
   window.alert(`you passed this ${arg}`);
 };
 
+const checkIfAvailable = (target) => {
+  let username = target.value;
+  let action = "checkUsername";
+  let available;
+  $(`span[id=connection-${target.id}]`).html(`Checking ${loader}`);
+  $.ajax({
+    url: "assets/scripts/signup.php",
+    method: "POST",
+    data: {
+      action: action, 
+      username: username,
+    },
+    success: function(response){
+      if(response == "available"){
+        available = true;
+        $(`#connection-${target.id}`).html("is OK");
+        localStorage.setItem("jojousername", username);
+      }else if(response == "unavailable"){
+        available = false;
+        $(`#connection-${target.id}`).html("is already taken");
+        localStorage.setItem("jojousername", false);
+      }
+      flagIfInvalid(target, available);
+    },
+    dataType: "text",
+    error: function(){
+        $(`span[id=connection-${target.id}]`).html(`${connectionError}`);
+    },
+    timeout: timeout
+  })
+  
+}
+
 const checkIfRegistered = (target) => {
   let email = target.value;
   let intent = target.getAttribute('data-intent');
@@ -35,7 +68,6 @@ const checkIfRegistered = (target) => {
                   isdbValid? $(`#connection-${target.id}`).html("is OK") : $(`#connection-${target.id}`).html("is not registered - Sign up?"); 
                 }
                 flagIfInvalid(target, isdbValid);
-                return isdbValid;
             },
             dataType: "text",
             error: function(){

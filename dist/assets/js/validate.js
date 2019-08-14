@@ -48,15 +48,3 @@ $("#ride-back").click(function(e) {
   }
 });
 
-
-
-
-$("#signup-next").click(function(e) {
-  e.preventDefault();
-  
-});
-
-$("#signup-back").click(function(e) {
-  e.preventDefault();
-  
-});

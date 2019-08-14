@@ -28,6 +28,7 @@ checkIfLoggedIn();
 const logout = () => {
     localStorage.removeItem('jojoemail');
     localStorage.removeItem('jojopass');
+    localStorage.removeItem('jojoid');
     M.toast({html : `loggin out &nbsp; ${loader}`, completeCallback: () => { window.location.replace("../index.html");}, displayLength: 1000 });
 };
 
