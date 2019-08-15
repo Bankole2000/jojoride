@@ -6,7 +6,7 @@ const name_reg=/^[a-z]{3,}$/i;
 const email_reg=/^[a-z]+(_|\.)?[a-z0-9]*@[a-z]+\.[a-z]{2,}$/i;
 const password_reg= new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[.!@#\$%\^&\*])(?=.{8,})");
 const date_reg = /^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{4})*$/;
-const username_reg = /^[0-9A-Za-z_.-]{4,}$/;
+const username_reg = /^[0-9a-z_.-]{4,}$/;
 const loader = "<i class='fas fa-spinner fa-pulse'></i>";
 
 
@@ -70,7 +70,7 @@ const checkAge = (target) => {
 const checkUsername = ({target}) => {
   value = target.value;
   isValid = username_reg.test(value) ? true : false ;
-  isValid ? checkIfAvailable(target) : $("#connection-username").html("letters, numbers, uderscore > 4");
+  isValid ? checkIfAvailable(target) : $("#connection-username").html("lowercase letters, numbers, uderscore > 4");
   flagIfInvalid(target, isValid);
   return isValid;
 }
@@ -148,6 +148,8 @@ const addDetails1 = () => {
 const addDetails2 = () => {
   user.username = $('#username').val();
   user.pass = $('#pass2').val();
+  user.code =  Math.floor(100000 + Math.random() * 900000);
+  console.log(user);
   M.toast({html : `email sent to ${user.email}`, classes: 'success', displayLength: 1500});
 }
 
@@ -170,7 +172,6 @@ $('#signup-next').on('click', function(){
     console.log(user);
     enableButton(nextId, false);
     enableButton(prevId, false);
-    
   }
    
 });

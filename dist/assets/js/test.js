@@ -78,6 +78,38 @@ const checkIfRegistered = (target) => {
   
 };
 
+const singupUser = (user) => {
+  let action = "signup";
+  $.ajax({
+    url: "assets/scripts/signup.php",
+    method: "POST",
+    data: {
+      action: action, 
+      email: user.email,
+      pass: user.pass,
+      username: user.username, 
+      gender: user.gender, 
+      firstname: user.firstname,
+      lastname: user.lastname,
+      birthdate: user.birthdate,
+      code: user.code
+    },
+    success: function(data){
+      console.log(data);
+      if(data.message === "success"){
+        alert("added");
+      }else if(data.message ==="failed"){
+        alert("failed");
+      }
+    },
+    dataType: "JSON",
+    error:function(){
+
+    },
+    timeout: timeout
+  })
+}
+
 const loginUser = (email, pass) => {
   let action = "newLogin";
   $.ajax({
