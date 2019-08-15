@@ -162,7 +162,9 @@ $('#signup-next').on('click', function(){
     console.log(user);
     enableButton(nextId, false);
     enableButton(prevId, true);
-  }else if(data === 2){
+    $("#signup-next").attr('data', "2");
+    $("#signup-back").attr('data', "1");
+  }else if(data === "2"){
     addDetails2();
     showform(data);
     console.log(user);

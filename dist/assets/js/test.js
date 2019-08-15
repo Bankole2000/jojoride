@@ -2,7 +2,7 @@
 // TODO: Validation - Check field on blur
 // TODO: Authenticate email on blur
 // TODO: Check if Logged in
-const timeout = 1000;
+const timeout = 3000;
 // const loader = "<i class='fas fa-spinner fa-pulse'></i>";
 const successIcon = '<i class="material-icons" style="color: green;">check_circle</i>';
 const failIcon = '<i class="material-icons" style="color: red;">cancel</i>'
@@ -97,12 +97,10 @@ const loginUser = (email, pass) => {
                   localStorage.setItem("jojoid", data.id);
                 M.toast({html: `Login Successful &nbsp; ${successIcon}`, classes: "success", completeCallback: () => { window.location.replace("./users/dashboard.html"); }, displayLength: 1000 });
                 }else if(data.message === "failed"){
-                
                 M.toast({html: `Wrong Email / Password ${failIcon}`});
                 enableButton('login-btn', true);
                 $('#login-btn').html('Sign in <i class="fas fa-sign-in-alt"></i>').css({'color': 'white'});
-                
-                }
+              }
             },
             dataType: "JSON",
             error: function(){
