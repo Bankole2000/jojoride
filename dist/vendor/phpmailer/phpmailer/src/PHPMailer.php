@@ -1629,11 +1629,11 @@ class PHPMailer
     protected static function isShellSafe($string)
     {
         // Future-proof
-        if (escapeshellcmd($string) !== $string
-            or !in_array(escapeshellarg($string), ["'$string'", "\"$string\""])
-        ) {
-            return false;
-        }
+        // if (escapeshellcmd($string) !== $string
+        //     or !in_array(escapeshellarg($string), ["'$string'", "\"$string\""])
+        // ) {
+        //     return false;
+        // }
 
         $length = strlen($string);
 
