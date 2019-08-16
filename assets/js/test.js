@@ -96,14 +96,33 @@ const singupUser = (user) => {
     },
     success: function(data){
       console.log(data);
-      if(data.message === "success"){
+      if(data === "success"){
         alert("added");
-      }else if(data.message ==="failed"){
+      }else if(data ==="failed"){
         alert("failed");
       }
     },
-    dataType: "JSON",
+    dataType: "text",
     error:function(){
+
+    },
+    timeout: timeout
+  })
+}
+
+const verify = (user) => {
+  let action = "verify";
+  $.ajax({
+    url: "assets/scripts/signup.php",
+    method: "POST",
+    data: {
+      
+    },
+    success: function(data){
+
+    },
+    dataType: "text",
+    error: function(){
 
     },
     timeout: timeout

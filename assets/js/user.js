@@ -79,11 +79,18 @@ const enableButton = (targetId, isValid) => {
   $(`#${targetId}`).toggleClass('disabled', !isValid);
 }
 
+const checkCode = () => {
+  const code = $('#code').val();
+  const isValid = /^[\d]{6}/.test(code);
+  enableButton('signup-next', isValid);
+}
+
 $('#first-name, #last-name').on('blur', checkName);
 document.querySelector('#login-email').addEventListener('blur', checkEmail);
+document.querySelector('#code').addEventListener('keyup', checkCode);
 document.querySelector('#signup-email').addEventListener('blur', checkEmail);
 document.querySelector('#username').addEventListener('blur', checkUsername);
-$(document).on('focusin',`#login-email, #signup-email, .name, #username, #pass1, #pass2`,function(){unmark(this)});
+$(document).on('focusin',`#login-email, #signup-email, .name, #username, #pass1, #pass2, #code`,function(){unmark(this)});
 $(document).on('keyup', '#birthdate', function(){checkAge(this)});
 $("#login-email, #login-password").on('keyup', function(){
   const email = $('#login-email').val();
@@ -142,7 +149,8 @@ const addDetails1 = () => {
   user.lastname = $('#last-name').val();
   user.email = $('#signup-email').val();
   user.gender =  $('#gender').val();
-  user.birthdate = $('#birthdate').val();
+  user.birthdate = new Date($('#birthdate').val()).toISOString().slice(0, 19).replace('T', ' ');
+  console.log(user.birthdate);
 };
 
 const addDetails2 = () => {
@@ -172,6 +180,16 @@ $('#signup-next').on('click', function(){
     console.log(user);
     enableButton(nextId, false);
     enableButton(prevId, false);
+    $('#signup-next').attr('data',"3").css({
+      'float':'none'
+    }).html('Verify');
+    $('#signup-back').css({
+      'display':'none'
+    });
+    singupUser(user);
+  }else if(data ==="3"){
+    enableButton(nextId, false);
+    verify(user);
   }
    
 });
